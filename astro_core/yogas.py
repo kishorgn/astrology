@@ -1,0 +1,118 @@
+"""Rule-based yoga detection on the Rasi chart (whole-sign houses from Lagna)."""
+from .jyotish import SIGN_LORD, KENDRA, TRIKONA, DUSTHANA, EXALTATION, OWN_SIGNS
+
+
+def _ctx(chart):
+    g = {x['key']: x for x in chart['grahas']}
+    lag = chart['lagna']['sign']['index']
+    sign = {k: v['sign']['index'] for k, v in g.items()}
+    house = {k: (s - lag) % 12 + 1 for k, s in sign.items()}
+    lord_of = {h: SIGN_LORD[(lag + h - 1) % 12] for h in range(1, 13)}
+    return g, lag, sign, house, lord_of
+
+
+def _rel_house(a, b):
+    """House of sign b counted from sign a."""
+    return (b - a) % 12 + 1
+
+
+def detect_yogas(chart):
+    g, lag, sign, house, lord_of = _ctx(chart)
+    found = []
+
+    def add(key, name_en, name_te, desc, strength='present'):
+        found.append({'key': key, 'name_english': name_en, 'name_telugu': name_te,
+                      'description': desc, 'strength': strength})
+
+    moon = sign['moon']
+    # Gaja Kesari
+    if _rel_house(moon, sign['jupiter']) in KENDRA:
+        add('gajakesari', 'Gaja Kesari Yoga', 'గజకేసరి యోగం',
+            'Jupiter in a kendra from the Moon: intelligence, reputation, respect and lasting prosperity.')
+    # Budha-Aditya
+    if sign['sun'] == sign['mercury'] and not g['mercury']['combust']:
+        add('budhaditya', 'Budha-Aditya Yoga', 'బుధాదిత్య యోగం',
+            'Sun and Mercury together (Mercury not combust): sharp intellect, communication and administrative skill.')
+    elif sign['sun'] == sign['mercury']:
+        add('budhaditya', 'Budha-Aditya Yoga (weak)', 'బుధాదిత్య యోగం (బలహీనం)',
+            'Sun and Mercury together but Mercury is combust, so the results are reduced.', 'weak')
+    # Chandra-Mangala
+    if sign['moon'] == sign['mars']:
+        add('chandramangala', 'Chandra-Mangala Yoga', 'చంద్ర మంగళ యోగం',
+            'Moon with Mars: earning capacity through enterprise; can make the temperament restless.')
+    # Pancha Mahapurusha
+    pmp = {'mars': ('Ruchaka', 'రుచక'), 'mercury': ('Bhadra', 'భద్ర'), 'jupiter': ('Hamsa', 'హంస'),
+           'venus': ('Malavya', 'మాలవ్య'), 'saturn': ('Sasa', 'శశ')}
+    for p, (en, te) in pmp.items():
+        if house[p] in KENDRA and (sign[p] in OWN_SIGNS[p] or sign[p] == EXALTATION[p][0]):
+            add(en.lower(), f'{en} Yoga (Pancha Mahapurusha)', f'{te} యోగం (పంచ మహాపురుష)',
+                f'{p.title()} in own/exaltation sign in a kendra (house {house[p]}): a strong, distinguished personality '
+                f'with the qualities of {p.title()}.')
+    # Sunapha / Anapha / Durudhura / Kemadruma
+    others = ['mars', 'mercury', 'jupiter', 'venus', 'saturn']
+    in2 = [p for p in others if _rel_house(moon, sign[p]) == 2]
+    in12 = [p for p in others if _rel_house(moon, sign[p]) == 12]
+    if in2 and in12:
+        add('durudhura', 'Durudhura Yoga', 'దురుధుర యోగం',
+            'Planets on both sides of the Moon: wealth, comforts and support from others.')
+    elif in2:
+        add('sunapha', 'Sunapha Yoga', 'సునఫా యోగం', 'Planet(s) in the 2nd from the Moon: self-earned wealth and good name.')
+    elif in12:
+        add('anapha', 'Anapha Yoga', 'అనఫా యోగం', 'Planet(s) in the 12th from the Moon: good health, charm and contentment.')
+    else:
+        with_moon = [p for p in others if sign[p] == moon]
+        kendra_lagna = [p for p in others + ['moon'] if house[p] in KENDRA]
+        if not with_moon and not kendra_lagna:
+            add('kemadruma', 'Kemadruma Yoga', 'కేమద్రుమ యోగం',
+                'No planets around the Moon and no cancellation by kendras: periods of struggle and loneliness; '
+                'remedies are traditionally advised.', 'adverse')
+        else:
+            add('kemadruma_cancelled', 'Kemadruma (cancelled)', 'కేమద్రుమ భంగం',
+                'Kemadruma forms but is cancelled by planets in kendra / with the Moon.', 'cancelled')
+    # Adhi yoga — benefics in 6,7,8 from Moon
+    ben = [p for p in ('mercury', 'jupiter', 'venus') if _rel_house(moon, sign[p]) in (6, 7, 8)]
+    if len(ben) >= 2:
+        add('adhi', 'Adhi Yoga', 'అధి యోగం',
+            'Benefics in the 6th/7th/8th from the Moon: leadership, comfort and victory over opponents.')
+    # Kala Sarpa
+    r, k = g['rahu']['longitude'], g['ketu']['longitude']
+    seven = [g[p]['longitude'] for p in ('sun', 'moon', 'mars', 'mercury', 'jupiter', 'venus', 'saturn')]
+    side_a = all((x - r) % 360 < 180 for x in seven)
+    side_b = all((x - k) % 360 < 180 for x in seven)
+    if side_a or side_b:
+        add('kalasarpa', 'Kala Sarpa Yoga', 'కాలసర్ప యోగం',
+            'All seven planets hemmed between Rahu and Ketu: obstacles and delays early, rise after effort.', 'adverse')
+    # Raja yoga — kendra lord & trikona lord conjoined or mutual aspect (7th)
+    kl = {lord_of[h] for h in (4, 7, 10)} | {lord_of[1]}
+    tl = {lord_of[h] for h in (5, 9)} | {lord_of[1]}
+    pairs = set()
+    for a in kl:
+        for b in tl:
+            if a != b and (sign[a] == sign[b] or _rel_house(sign[a], sign[b]) == 7):
+                pairs.add(tuple(sorted((a, b))))
+    for a, b in sorted(pairs):
+        add(f'raja_{a}_{b}', f'Raja Yoga ({a.title()}–{b.title()})', 'రాజ యోగం',
+            f'Kendra and trikona lords {a.title()} and {b.title()} are connected: status, authority and success, '
+            f'especially in their dashas.')
+    # Dhana yoga — lords of 2/11 linked to 5/9
+    dl = {lord_of[2], lord_of[11]}
+    fl = {lord_of[5], lord_of[9]}
+    for a in dl:
+        for b in fl:
+            if a != b and sign[a] == sign[b]:
+                add(f'dhana_{a}_{b}', f'Dhana Yoga ({a.title()}–{b.title()})', 'ధన యోగం',
+                    'Wealth lords conjoined with fortune lords: accumulation of wealth.')
+    # Vipareeta Raja yoga
+    for h, nm, te in ((6, 'Harsha', 'హర్ష'), (8, 'Sarala', 'సరళ'), (12, 'Vimala', 'విమల')):
+        l = lord_of[h]
+        if house[l] in DUSTHANA:
+            add(f'vipareeta_{h}', f'{nm} Yoga (Vipareeta Raja)', f'{te} యోగం (విపరీత రాజ)',
+                f'Lord of the {h}th placed in a dusthana (house {house[l]}): gains arising from adversity.')
+    # Neecha bhanga (simplified: dispositor of debilitated planet in kendra from lagna or moon)
+    for x in chart['grahas']:
+        if x['dignity'] == 'debilitated':
+            disp = SIGN_LORD[x['sign']['index']]
+            if house[disp] in KENDRA or _rel_house(moon, sign[disp]) in KENDRA:
+                add(f'neechabhanga_{x["key"]}', f'Neecha Bhanga Raja Yoga ({x["key"].title()})', 'నీచభంగ రాజ యోగం',
+                    f'{x["key"].title()} is debilitated but its dispositor is in a kendra, cancelling the debility.')
+    return found

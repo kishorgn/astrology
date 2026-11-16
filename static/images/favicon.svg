@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#667eea"/><stop offset="1" stop-color="#764ba2"/></linearGradient></defs>
+  <rect width="64" height="64" rx="12" fill="url(#g)"/>
+  <!-- South Indian chart: outer square, 4x4 grid, empty centre -->
+  <g fill="none" stroke="#ffd36b" stroke-width="2.4">
+    <rect x="10" y="10" width="44" height="44" rx="2"/>
+    <path d="M21 10V21M43 10V21M21 43V54M43 43V54M10 21H21M10 43H21M43 21H54M43 43H54M32 10V21M32 43V54M10 32H21M43 32H54"/>
+    <rect x="21" y="21" width="22" height="22"/>
+  </g>
+  <circle cx="32" cy="32" r="5" fill="#ffd36b"/>
+</svg>

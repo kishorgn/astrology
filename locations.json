@@ -1,0 +1,4083 @@
+{
+  "countries": [
+    {
+      "name": "Albania",
+      "code": "AL",
+      "cities": [
+        {
+          "name": "Tirana, Shqipëria Qendrore",
+          "lat": 41.3275,
+          "lng": 19.8189,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Durrës, Shqipëria Veriore",
+          "lat": 41.3236,
+          "lng": 19.4536,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Vlorë, Shqipëria Jugore",
+          "lat": 40.4686,
+          "lng": 19.4914,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Shkodër, Shqipëria Veriore",
+          "lat": 42.0683,
+          "lng": 19.5122,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Algeria",
+      "code": "DZ",
+      "cities": [
+        {
+          "name": "Algiers, Alger",
+          "lat": 36.7378,
+          "lng": 3.0875,
+          "timezone": 1.0,
+          "iana_tz": "Africa/Lagos"
+        },
+        {
+          "name": "Oran, Oran",
+          "lat": 35.6911,
+          "lng": -0.6417,
+          "timezone": 1.0,
+          "iana_tz": "Africa/Lagos"
+        },
+        {
+          "name": "Constantine, Constantine",
+          "lat": 36.365,
+          "lng": 6.6147,
+          "timezone": 1.0,
+          "iana_tz": "Africa/Lagos"
+        },
+        {
+          "name": "Annaba, Annaba",
+          "lat": 36.9,
+          "lng": 7.7667,
+          "timezone": 1.0,
+          "iana_tz": "Africa/Lagos"
+        }
+      ]
+    },
+    {
+      "name": "Argentina",
+      "code": "AR",
+      "cities": [
+        {
+          "name": "Buenos Aires, Ciudad Autónoma de Buenos Aires",
+          "lat": -34.6118,
+          "lng": -58.396,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Córdoba, Córdoba",
+          "lat": -31.4135,
+          "lng": -64.1811,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Rosario, Santa Fe",
+          "lat": -32.9468,
+          "lng": -60.6393,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Mendoza, Mendoza",
+          "lat": -32.8895,
+          "lng": -68.8458,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "La Plata, Buenos Aires",
+          "lat": -34.9215,
+          "lng": -57.9545,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        }
+      ]
+    },
+    {
+      "name": "Australia",
+      "code": "AU",
+      "cities": [
+        {
+          "name": "Sydney, New South Wales",
+          "lat": -33.8651,
+          "lng": 151.2099,
+          "timezone": 10.0,
+          "iana_tz": "Australia/Sydney"
+        },
+        {
+          "name": "Melbourne, Victoria",
+          "lat": -37.8136,
+          "lng": 144.9631,
+          "timezone": 10.0,
+          "iana_tz": "Australia/Sydney"
+        },
+        {
+          "name": "Brisbane, Queensland",
+          "lat": -27.4678,
+          "lng": 153.0281,
+          "timezone": 10.0,
+          "iana_tz": "Australia/Brisbane"
+        },
+        {
+          "name": "Perth, Western Australia",
+          "lat": -31.9522,
+          "lng": 115.8589,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Adelaide, South Australia",
+          "lat": -34.9285,
+          "lng": 138.6007,
+          "timezone": 9.5,
+          "iana_tz": "Australia/Adelaide"
+        },
+        {
+          "name": "Canberra",
+          "lat": -35.282,
+          "lng": 149.1286,
+          "timezone": 10.0,
+          "iana_tz": "Australia/Sydney"
+        },
+        {
+          "name": "Darwin, City of Darwin",
+          "lat": -12.4381,
+          "lng": 130.8411,
+          "timezone": 9.5,
+          "iana_tz": "Australia/Darwin"
+        }
+      ]
+    },
+    {
+      "name": "Austria",
+      "code": "AT",
+      "cities": [
+        {
+          "name": "Vienna",
+          "lat": 48.2082,
+          "lng": 16.3738,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Salzburg, Salzburg",
+          "lat": 47.8095,
+          "lng": 13.055,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Innsbruck, Tirol",
+          "lat": 47.2692,
+          "lng": 11.4041,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Graz, Steiermark",
+          "lat": 47.0707,
+          "lng": 15.4395,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Belgium",
+      "code": "BE",
+      "cities": [
+        {
+          "name": "Brussels, Région de Bruxelles-Capitale - Brussels Hoofdstedelijk Gewest",
+          "lat": 50.8503,
+          "lng": 4.3517,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Antwerp, Antwerpen",
+          "lat": 51.2194,
+          "lng": 4.4025,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Ghent, Oost-Vlaanderen",
+          "lat": 51.05,
+          "lng": 3.7167,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Bruges, West-Vlaanderen",
+          "lat": 51.2093,
+          "lng": 3.2247,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Brazil",
+      "code": "BR",
+      "cities": [
+        {
+          "name": "São Paulo, São Paulo",
+          "lat": -23.5558,
+          "lng": -46.6396,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Rio de Janeiro, Rio de Janeiro",
+          "lat": -22.9068,
+          "lng": -43.1729,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Brasília, Distrito Federal",
+          "lat": -15.8267,
+          "lng": -47.9218,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Salvador, Bahia",
+          "lat": -12.9777,
+          "lng": -38.5016,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Fortaleza, Ceará",
+          "lat": -3.7319,
+          "lng": -38.5267,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Belo Horizonte, Minas Gerais",
+          "lat": -19.8157,
+          "lng": -43.9542,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Manaus, Amazonas",
+          "lat": -3.119,
+          "lng": -60.0217,
+          "timezone": -4.0,
+          "iana_tz": "America/Caracas"
+        },
+        {
+          "name": "Recife, Pernambuco",
+          "lat": -8.0476,
+          "lng": -34.877,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        }
+      ]
+    },
+    {
+      "name": "Canada",
+      "code": "CA",
+      "cities": [
+        {
+          "name": "Toronto, Ontario",
+          "lat": 43.6532,
+          "lng": -79.3832,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Vancouver, British Columbia",
+          "lat": 49.2827,
+          "lng": -123.1207,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Montreal, Québec",
+          "lat": 45.5017,
+          "lng": -73.5673,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Calgary, Alberta",
+          "lat": 51.0447,
+          "lng": -114.0719,
+          "timezone": -7.0,
+          "iana_tz": "America/Denver"
+        },
+        {
+          "name": "Ottawa, Ontario",
+          "lat": 45.4215,
+          "lng": -75.6972,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Edmonton, Alberta",
+          "lat": 53.5444,
+          "lng": -113.4909,
+          "timezone": -7.0,
+          "iana_tz": "America/Denver"
+        },
+        {
+          "name": "Quebec City, Québec",
+          "lat": 46.8139,
+          "lng": -71.208,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Winnipeg, Manitoba",
+          "lat": 49.8951,
+          "lng": -97.1384,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        }
+      ]
+    },
+    {
+      "name": "Colombia",
+      "code": "CO",
+      "cities": [
+        {
+          "name": "Bogotá, Bogotá, Distrito Capital",
+          "lat": 4.711,
+          "lng": -74.0721,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        },
+        {
+          "name": "Medellín, Antioquia",
+          "lat": 6.2442,
+          "lng": -75.5812,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        },
+        {
+          "name": "Cali, Valle del Cauca",
+          "lat": 3.4516,
+          "lng": -76.532,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        },
+        {
+          "name": "Barranquilla, Atlántico",
+          "lat": 10.9685,
+          "lng": -74.7813,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        },
+        {
+          "name": "Cartagena, Bolívar",
+          "lat": 10.391,
+          "lng": -75.4794,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        }
+      ]
+    },
+    {
+      "name": "Czech Republic",
+      "code": "CZ",
+      "cities": [
+        {
+          "name": "Prague, Praha",
+          "lat": 50.0755,
+          "lng": 14.4378,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Brno, Jihomoravský kraj",
+          "lat": 49.1951,
+          "lng": 16.6068,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Ostrava, Moravskoslezský kraj",
+          "lat": 49.8209,
+          "lng": 18.2625,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Plzen, Plzeňský kraj",
+          "lat": 49.7384,
+          "lng": 13.3736,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Denmark",
+      "code": "DK",
+      "cities": [
+        {
+          "name": "Copenhagen, Region Hovedstaden",
+          "lat": 55.6761,
+          "lng": 12.5683,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Aarhus, Region Midtjylland",
+          "lat": 56.1629,
+          "lng": 10.2039,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Odense, Region Syddanmark",
+          "lat": 55.4038,
+          "lng": 10.4024,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Aalborg, Region Nordjylland",
+          "lat": 57.0488,
+          "lng": 9.9217,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Egypt",
+      "code": "EG",
+      "cities": [
+        {
+          "name": "Cairo, القاهرة",
+          "lat": 30.0444,
+          "lng": 31.2357,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Cairo"
+        },
+        {
+          "name": "Alexandria, الإسكندرية",
+          "lat": 31.2001,
+          "lng": 29.9187,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Cairo"
+        },
+        {
+          "name": "Giza, الجيزة",
+          "lat": 30.0131,
+          "lng": 31.2089,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Cairo"
+        },
+        {
+          "name": "Luxor, الأقصر",
+          "lat": 25.6872,
+          "lng": 32.6396,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Cairo"
+        },
+        {
+          "name": "Aswan, أسوان",
+          "lat": 24.0889,
+          "lng": 32.8998,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Cairo"
+        }
+      ]
+    },
+    {
+      "name": "Finland",
+      "code": "FI",
+      "cities": [
+        {
+          "name": "Helsinki, Uusimaa",
+          "lat": 60.1699,
+          "lng": 24.9384,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Espoo, Uusimaa",
+          "lat": 60.2055,
+          "lng": 24.6559,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Tampere, Pirkanmaa",
+          "lat": 61.4978,
+          "lng": 23.761,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Turku, Varsinais-Suomi",
+          "lat": 60.4518,
+          "lng": 22.2666,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        }
+      ]
+    },
+    {
+      "name": "France",
+      "code": "FR",
+      "cities": [
+        {
+          "name": "Paris, Île-de-France",
+          "lat": 48.8566,
+          "lng": 2.3522,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Marseille, Provence-Alpes-Côte d'Azur",
+          "lat": 43.2965,
+          "lng": 5.3698,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Lyon, Auvergne-Rhône-Alpes",
+          "lat": 45.764,
+          "lng": 4.8357,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Toulouse, Occitanie",
+          "lat": 43.6047,
+          "lng": 1.4442,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Nice, Provence-Alpes-Côte d'Azur",
+          "lat": 43.7102,
+          "lng": 7.262,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Nantes, Pays de la Loire",
+          "lat": 47.2184,
+          "lng": -1.5536,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Strasbourg, Grand Est",
+          "lat": 48.5734,
+          "lng": 7.7521,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Montpellier, Occitanie",
+          "lat": 43.6108,
+          "lng": 3.8767,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Germany",
+      "code": "DE",
+      "cities": [
+        {
+          "name": "Berlin",
+          "lat": 52.52,
+          "lng": 13.405,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Hamburg",
+          "lat": 53.5511,
+          "lng": 9.9937,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Munich, Bayern",
+          "lat": 48.1351,
+          "lng": 11.582,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Cologne, Nordrhein-Westfalen",
+          "lat": 50.9375,
+          "lng": 6.9603,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Frankfurt, Hessen",
+          "lat": 50.1109,
+          "lng": 8.6821,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Stuttgart, Baden-Württemberg",
+          "lat": 48.7758,
+          "lng": 9.1829,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Düsseldorf, Nordrhein-Westfalen",
+          "lat": 51.2277,
+          "lng": 6.7735,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Leipzig, Sachsen",
+          "lat": 51.3397,
+          "lng": 12.3731,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Ghana",
+      "code": "GH",
+      "cities": [
+        {
+          "name": "Accra, Greater Accra Region",
+          "lat": 5.6037,
+          "lng": -0.187,
+          "timezone": 0.0,
+          "iana_tz": "Africa/Abidjan"
+        },
+        {
+          "name": "Kumasi, Ashanti Region",
+          "lat": 6.6885,
+          "lng": -1.6244,
+          "timezone": 0.0,
+          "iana_tz": "Africa/Abidjan"
+        },
+        {
+          "name": "Tamale, Northern Region",
+          "lat": 9.4034,
+          "lng": -0.8424,
+          "timezone": 0.0,
+          "iana_tz": "Africa/Abidjan"
+        },
+        {
+          "name": "Tema, Greater Accra Region",
+          "lat": 5.6698,
+          "lng": 0.0017,
+          "timezone": 0.0,
+          "iana_tz": "Africa/Abidjan"
+        }
+      ]
+    },
+    {
+      "name": "Greece",
+      "code": "GR",
+      "cities": [
+        {
+          "name": "Athens, Περιφέρεια Αττικής",
+          "lat": 37.9838,
+          "lng": 23.7275,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Thessaloniki, Περιφέρεια Κεντρικής Μακεδονίας",
+          "lat": 40.6401,
+          "lng": 22.9444,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Patras, Περιφέρεια Δυτικής Ελλάδας",
+          "lat": 38.2466,
+          "lng": 21.7346,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Heraklion, Περιφέρεια Κρήτης",
+          "lat": 35.3387,
+          "lng": 25.1442,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        }
+      ]
+    },
+    {
+      "name": "Hungary",
+      "code": "HU",
+      "cities": [
+        {
+          "name": "Budapest, Budapest",
+          "lat": 47.4979,
+          "lng": 19.0402,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Debrecen, Észak-Alföld",
+          "lat": 47.5316,
+          "lng": 21.6273,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Szeged, Dél-Alföld",
+          "lat": 46.253,
+          "lng": 20.1414,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Pécs, Dél-Dunántúl",
+          "lat": 46.0727,
+          "lng": 18.233,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "India",
+      "code": "IN",
+      "cities": [
+        {
+          "name": "Tirupati, Andhra Pradesh",
+          "lat": 13.6288,
+          "lng": 79.4192,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Tirumala, Andhra Pradesh",
+          "lat": 13.6833,
+          "lng": 79.35,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Vaishno Devi, Jammu and Kashmir",
+          "lat": 33.0308,
+          "lng": 74.9458,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kanchi, Tamil Nadu",
+          "lat": 12.8273,
+          "lng": 79.7036,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Dwaraka, Gujarat",
+          "lat": 22.2403,
+          "lng": 68.9687,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Somnath, Gujarat",
+          "lat": 20.888,
+          "lng": 70.4013,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Haridwar, Uttarakhand",
+          "lat": 29.9457,
+          "lng": 78.1642,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mumbai, Maharashtra",
+          "lat": 19.076,
+          "lng": 72.8777,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "New Delhi",
+          "lat": 28.6139,
+          "lng": 77.209,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bengaluru, Karnataka",
+          "lat": 12.9716,
+          "lng": 77.5946,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Hyderabad, Telangana",
+          "lat": 17.385,
+          "lng": 78.4867,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Godavarikhani, Telangana",
+          "lat": 18.7519,
+          "lng": 79.5133,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Chennai, Tamil Nadu",
+          "lat": 13.0827,
+          "lng": 80.2707,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kolkata, West Bengal",
+          "lat": 22.5726,
+          "lng": 88.3639,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Pune, Maharashtra",
+          "lat": 18.5204,
+          "lng": 73.8567,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ahmedabad, Gujarat",
+          "lat": 23.0225,
+          "lng": 72.5714,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jaipur, Rajasthan",
+          "lat": 26.9124,
+          "lng": 75.7873,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Surat, Gujarat",
+          "lat": 21.1702,
+          "lng": 72.8311,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Lucknow, Uttar Pradesh",
+          "lat": 26.8467,
+          "lng": 80.9462,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kanpur, Uttar Pradesh",
+          "lat": 26.4499,
+          "lng": 80.3319,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nagpur, Maharashtra",
+          "lat": 21.1458,
+          "lng": 79.0882,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Indore, Madhya Pradesh",
+          "lat": 22.7196,
+          "lng": 75.8577,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Thane, Maharashtra",
+          "lat": 19.2183,
+          "lng": 72.9781,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bhopal, Madhya Pradesh",
+          "lat": 23.2599,
+          "lng": 77.4126,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Visakhapatnam, Andhra Pradesh",
+          "lat": 17.6868,
+          "lng": 83.2185,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Pimpri-Chinchwad, Maharashtra",
+          "lat": 18.6298,
+          "lng": 73.7997,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Patna, Bihar",
+          "lat": 25.5941,
+          "lng": 85.1376,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Vadodara, Gujarat",
+          "lat": 22.3072,
+          "lng": 73.1812,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ghaziabad, Uttar Pradesh",
+          "lat": 28.6692,
+          "lng": 77.4538,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ludhiana, Punjab",
+          "lat": 30.901,
+          "lng": 75.8573,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Agra, Uttar Pradesh",
+          "lat": 27.1767,
+          "lng": 78.0081,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nashik, Maharashtra",
+          "lat": 19.9975,
+          "lng": 73.7898,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Faridabad, Haryana",
+          "lat": 28.4089,
+          "lng": 77.3178,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Meerut, Uttar Pradesh",
+          "lat": 28.9845,
+          "lng": 77.7064,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Rajkot, Gujarat",
+          "lat": 22.3039,
+          "lng": 70.8022,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kalyan-Dombivli, Maharashtra",
+          "lat": 19.2403,
+          "lng": 73.1305,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Vasai-Virar, Maharashtra",
+          "lat": 19.4919,
+          "lng": 72.8397,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Varanasi, Uttar Pradesh",
+          "lat": 25.3176,
+          "lng": 82.9739,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Srinagar, Jammu and Kashmir",
+          "lat": 34.0837,
+          "lng": 74.7973,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Aurangabad, Maharashtra",
+          "lat": 19.8762,
+          "lng": 75.3433,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Dhanbad, Jharkhand",
+          "lat": 23.7957,
+          "lng": 86.4304,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Amritsar, Punjab",
+          "lat": 31.634,
+          "lng": 74.8723,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Navi Mumbai, Maharashtra",
+          "lat": 19.033,
+          "lng": 73.0297,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Allahabad, Uttar Pradesh",
+          "lat": 25.4358,
+          "lng": 81.8463,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ranchi, Jharkhand",
+          "lat": 23.3441,
+          "lng": 85.3096,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Howrah, West Bengal",
+          "lat": 22.5958,
+          "lng": 88.2636,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Coimbatore, Tamil Nadu",
+          "lat": 11.0168,
+          "lng": 76.9558,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jabalpur, Madhya Pradesh",
+          "lat": 23.1815,
+          "lng": 79.9864,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Gwalior, Madhya Pradesh",
+          "lat": 26.2183,
+          "lng": 78.1828,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Vijayawada, Andhra Pradesh",
+          "lat": 16.5062,
+          "lng": 80.648,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jodhpur, Rajasthan",
+          "lat": 26.2389,
+          "lng": 73.0243,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Madurai, Tamil Nadu",
+          "lat": 9.9252,
+          "lng": 78.1198,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Raipur, Chhattisgarh",
+          "lat": 21.2514,
+          "lng": 81.6296,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kota, Rajasthan",
+          "lat": 25.2138,
+          "lng": 75.8648,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Chandigarh, Chandigarh",
+          "lat": 30.7333,
+          "lng": 76.7794,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Guwahati, Assam",
+          "lat": 26.1445,
+          "lng": 91.7362,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Solapur, Maharashtra",
+          "lat": 17.6599,
+          "lng": 75.9064,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Hubli-Dharwad, Karnataka",
+          "lat": 15.3647,
+          "lng": 75.124,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mysore, Karnataka",
+          "lat": 12.2958,
+          "lng": 76.6394,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Tiruchirappalli, Tamil Nadu",
+          "lat": 10.7905,
+          "lng": 78.7047,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bareilly, Uttar Pradesh",
+          "lat": 28.367,
+          "lng": 79.4304,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Aligarh, Uttar Pradesh",
+          "lat": 27.8974,
+          "lng": 78.088,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Salem, Tamil Nadu",
+          "lat": 11.6643,
+          "lng": 78.146,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mira-Bhayandar, Maharashtra",
+          "lat": 19.2952,
+          "lng": 72.8544,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Thiruvananthapuram, Kerala",
+          "lat": 8.5241,
+          "lng": 76.9366,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bhiwandi, Maharashtra",
+          "lat": 19.3002,
+          "lng": 73.0638,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Saharanpur, Uttar Pradesh",
+          "lat": 29.968,
+          "lng": 77.5552,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Gorakhpur, Uttar Pradesh",
+          "lat": 26.7606,
+          "lng": 83.3732,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Guntur, Andhra Pradesh",
+          "lat": 16.3067,
+          "lng": 80.4365,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bikaner, Rajasthan",
+          "lat": 28.0229,
+          "lng": 73.3119,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Amravati, Maharashtra",
+          "lat": 20.9374,
+          "lng": 77.7796,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Noida, Uttar Pradesh",
+          "lat": 28.5355,
+          "lng": 77.391,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jamshedpur, Jharkhand",
+          "lat": 22.8046,
+          "lng": 86.2029,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bhilai, Chhattisgarh",
+          "lat": 21.1938,
+          "lng": 81.3509,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Cuttack, Odisha",
+          "lat": 20.4625,
+          "lng": 85.8828,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Firozabad, Uttar Pradesh",
+          "lat": 27.1592,
+          "lng": 78.3957,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kochi, Kerala",
+          "lat": 9.9312,
+          "lng": 76.2673,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nellore, Andhra Pradesh",
+          "lat": 14.4426,
+          "lng": 79.9865,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bhavnagar, Gujarat",
+          "lat": 21.7645,
+          "lng": 72.1519,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Dehradun, Uttarakhand",
+          "lat": 30.3165,
+          "lng": 78.0322,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Durgapur, West Bengal",
+          "lat": 23.4881,
+          "lng": 87.3115,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Asansol, West Bengal",
+          "lat": 23.6739,
+          "lng": 86.9524,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Rourkela, Odisha",
+          "lat": 22.2604,
+          "lng": 84.8536,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nanded, Maharashtra",
+          "lat": 19.1383,
+          "lng": 77.321,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kolhapur, Maharashtra",
+          "lat": 16.705,
+          "lng": 74.2433,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ajmer, Rajasthan",
+          "lat": 26.4499,
+          "lng": 74.6399,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Akola, Maharashtra",
+          "lat": 20.7002,
+          "lng": 77.0082,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Gulbarga, Karnataka",
+          "lat": 17.3297,
+          "lng": 76.8343,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jamnagar, Gujarat",
+          "lat": 22.4707,
+          "lng": 70.0577,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ujjain, Madhya Pradesh",
+          "lat": 23.1765,
+          "lng": 75.7885,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Loni, Uttar Pradesh",
+          "lat": 28.7549,
+          "lng": 77.2895,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Siliguri, West Bengal",
+          "lat": 26.7271,
+          "lng": 88.3953,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jhansi, Uttar Pradesh",
+          "lat": 25.4484,
+          "lng": 78.5685,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ulhasnagar, Maharashtra",
+          "lat": 19.2215,
+          "lng": 73.1645,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jammu, Jammu and Kashmir",
+          "lat": 32.7266,
+          "lng": 74.857,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Sangli-Miraj-Kupwad, Maharashtra",
+          "lat": 16.8524,
+          "lng": 74.5815,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mangalore, Karnataka",
+          "lat": 12.9141,
+          "lng": 74.856,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Erode, Tamil Nadu",
+          "lat": 11.341,
+          "lng": 77.7172,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Belgaum, Karnataka",
+          "lat": 15.8497,
+          "lng": 74.4977,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ambattur, Tamil Nadu",
+          "lat": 13.1143,
+          "lng": 80.1548,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Tirunelveli, Tamil Nadu",
+          "lat": 8.7139,
+          "lng": 77.7567,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Malegaon, Maharashtra",
+          "lat": 20.5579,
+          "lng": 74.5287,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Gaya, Bihar",
+          "lat": 24.7914,
+          "lng": 85.0002,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jalgaon, Maharashtra",
+          "lat": 21.0077,
+          "lng": 75.5626,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Udaipur, Rajasthan",
+          "lat": 24.5854,
+          "lng": 73.7125,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kakinada, Andhra Pradesh",
+          "lat": 16.9891,
+          "lng": 82.2475,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        }
+      ]
+    },
+    {
+      "name": "Indonesia",
+      "code": "ID",
+      "cities": [
+        {
+          "name": "Jakarta, Jawa",
+          "lat": -6.2088,
+          "lng": 106.8456,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Surabaya, Jawa Timur",
+          "lat": -7.2575,
+          "lng": 112.7521,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Medan, Sumatera Utara",
+          "lat": 3.5952,
+          "lng": 98.6722,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Bandung, Jawa Barat",
+          "lat": -6.9175,
+          "lng": 107.6191,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Bekasi, Jawa Barat",
+          "lat": -6.2383,
+          "lng": 106.9756,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Tangerang, Banten",
+          "lat": -6.1781,
+          "lng": 106.6319,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Depok, Jawa Barat",
+          "lat": -6.4025,
+          "lng": 106.7942,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Semarang, Jawa Tengah",
+          "lat": -6.9665,
+          "lng": 110.4203,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Palembang, Sumatera Selatan",
+          "lat": -2.9761,
+          "lng": 104.7754,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Makassar, Sulawesi Selatan",
+          "lat": -5.1477,
+          "lng": 119.4327,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        }
+      ]
+    },
+    {
+      "name": "Iran",
+      "code": "IR",
+      "cities": [
+        {
+          "name": "Tehran, استان تهران",
+          "lat": 35.6892,
+          "lng": 51.389,
+          "timezone": 3.5,
+          "iana_tz": "Asia/Tehran"
+        },
+        {
+          "name": "Mashhad, استان خراسان رضوی",
+          "lat": 36.2605,
+          "lng": 59.6168,
+          "timezone": 3.5,
+          "iana_tz": "Asia/Tehran"
+        },
+        {
+          "name": "Isfahan, استان اصفهان",
+          "lat": 32.6546,
+          "lng": 51.668,
+          "timezone": 3.5,
+          "iana_tz": "Asia/Tehran"
+        },
+        {
+          "name": "Karaj, استان البرز",
+          "lat": 35.8327,
+          "lng": 50.9916,
+          "timezone": 3.5,
+          "iana_tz": "Asia/Tehran"
+        },
+        {
+          "name": "Shiraz, استان فارس",
+          "lat": 29.5918,
+          "lng": 52.5837,
+          "timezone": 3.5,
+          "iana_tz": "Asia/Tehran"
+        },
+        {
+          "name": "Tabriz, استان آذربایجان شرقی",
+          "lat": 38.0962,
+          "lng": 46.2738,
+          "timezone": 3.5,
+          "iana_tz": "Asia/Tehran"
+        }
+      ]
+    },
+    {
+      "name": "Iraq",
+      "code": "IQ",
+      "cities": [
+        {
+          "name": "Baghdad, محافظة بغداد",
+          "lat": 33.3152,
+          "lng": 44.3661,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Basra, محافظة البصرة",
+          "lat": 30.5085,
+          "lng": 47.7804,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Mosul, محافظة نینوى",
+          "lat": 36.335,
+          "lng": 43.1189,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Erbil, پارێزگای ھەولێر",
+          "lat": 36.1911,
+          "lng": 44.0092,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        }
+      ]
+    },
+    {
+      "name": "Ireland",
+      "code": "IE",
+      "cities": [
+        {
+          "name": "Dublin, Leinster",
+          "lat": 53.3498,
+          "lng": -6.2603,
+          "timezone": 0.0,
+          "iana_tz": "Europe/Dublin"
+        },
+        {
+          "name": "Cork, Munster",
+          "lat": 51.8985,
+          "lng": -8.4756,
+          "timezone": 0.0,
+          "iana_tz": "Europe/Dublin"
+        },
+        {
+          "name": "Limerick, Munster",
+          "lat": 52.6638,
+          "lng": -8.6267,
+          "timezone": 0.0,
+          "iana_tz": "Europe/Dublin"
+        },
+        {
+          "name": "Galway, Connacht",
+          "lat": 53.2707,
+          "lng": -9.0568,
+          "timezone": 0.0,
+          "iana_tz": "Europe/Dublin"
+        }
+      ]
+    },
+    {
+      "name": "Israel",
+      "code": "IL",
+      "cities": [
+        {
+          "name": "Jerusalem, מחוז ירושלים",
+          "lat": 31.7683,
+          "lng": 35.2137,
+          "timezone": 2.0,
+          "iana_tz": "Asia/Jerusalem"
+        },
+        {
+          "name": "Tel Aviv, מחוז תל אביב",
+          "lat": 32.0853,
+          "lng": 34.7818,
+          "timezone": 2.0,
+          "iana_tz": "Asia/Jerusalem"
+        },
+        {
+          "name": "Haifa, מחוז חיפה",
+          "lat": 32.794,
+          "lng": 34.9896,
+          "timezone": 2.0,
+          "iana_tz": "Asia/Jerusalem"
+        },
+        {
+          "name": "Rishon LeZion, מחוז המרכז",
+          "lat": 31.973,
+          "lng": 34.7925,
+          "timezone": 2.0,
+          "iana_tz": "Asia/Jerusalem"
+        }
+      ]
+    },
+    {
+      "name": "Italy",
+      "code": "IT",
+      "cities": [
+        {
+          "name": "Rome, Lazio",
+          "lat": 41.9028,
+          "lng": 12.4964,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Milan, Lombardia",
+          "lat": 45.4642,
+          "lng": 9.19,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Naples, Campania",
+          "lat": 40.8518,
+          "lng": 14.2681,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Turin, Piemonte",
+          "lat": 45.0703,
+          "lng": 7.6869,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Palermo, Sicilia",
+          "lat": 38.1157,
+          "lng": 13.3615,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Genoa, Liguria",
+          "lat": 44.4056,
+          "lng": 8.9463,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Bologna, Emilia-Romagna",
+          "lat": 44.4949,
+          "lng": 11.3426,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Florence, Toscana",
+          "lat": 43.7696,
+          "lng": 11.2558,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Venice, Veneto",
+          "lat": 45.4408,
+          "lng": 12.3155,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Japan",
+      "code": "JP",
+      "cities": [
+        {
+          "name": "Tokyo",
+          "lat": 35.6762,
+          "lng": 139.6503,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Yokohama",
+          "lat": 35.4437,
+          "lng": 139.638,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Osaka",
+          "lat": 34.6937,
+          "lng": 135.5023,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Nagoya",
+          "lat": 35.1815,
+          "lng": 136.9066,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Sapporo, 北海道地方",
+          "lat": 43.0642,
+          "lng": 141.3469,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Fukuoka",
+          "lat": 33.5904,
+          "lng": 130.4017,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Kobe",
+          "lat": 34.6901,
+          "lng": 135.1956,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Kawasaki",
+          "lat": 35.5308,
+          "lng": 139.7029,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Kyoto",
+          "lat": 35.0116,
+          "lng": 135.7681,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Saitama",
+          "lat": 35.8617,
+          "lng": 139.6455,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        }
+      ]
+    },
+    {
+      "name": "Jordan",
+      "code": "JO",
+      "cities": [
+        {
+          "name": "Amman, عمان",
+          "lat": 31.9539,
+          "lng": 35.9106,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Zarqa, الزرقاء",
+          "lat": 32.0732,
+          "lng": 36.0878,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Irbid, إربد",
+          "lat": 32.5556,
+          "lng": 35.85,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Aqaba, العقبة",
+          "lat": 29.532,
+          "lng": 35.0063,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Moscow"
+        }
+      ]
+    },
+    {
+      "name": "Kenya",
+      "code": "KE",
+      "cities": [
+        {
+          "name": "Nairobi, Nairobi",
+          "lat": -1.2921,
+          "lng": 36.8219,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Mombasa, Mombasa",
+          "lat": -4.0435,
+          "lng": 39.6682,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Kisumu, Kisumu",
+          "lat": -0.1022,
+          "lng": 34.7617,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Nakuru, Nakuru",
+          "lat": -0.3031,
+          "lng": 36.08,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        }
+      ]
+    },
+    {
+      "name": "South Korea",
+      "code": "KR",
+      "cities": [
+        {
+          "name": "Seoul",
+          "lat": 37.5665,
+          "lng": 126.978,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Busan",
+          "lat": 35.1796,
+          "lng": 129.0756,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Incheon",
+          "lat": 37.4563,
+          "lng": 126.7052,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Daegu",
+          "lat": 35.8714,
+          "lng": 128.6014,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Daejeon",
+          "lat": 36.3504,
+          "lng": 127.3845,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        },
+        {
+          "name": "Gwangju",
+          "lat": 35.1595,
+          "lng": 126.8526,
+          "timezone": 9.0,
+          "iana_tz": "Asia/Tokyo"
+        }
+      ]
+    },
+    {
+      "name": "Kuwait",
+      "code": "KW",
+      "cities": [
+        {
+          "name": "Kuwait City, محافظة العاصمة",
+          "lat": 29.3759,
+          "lng": 47.9774,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Al Ahmadi, محافظة الأحمدي",
+          "lat": 29.0769,
+          "lng": 48.0492,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Hawalli, محافظة حولي",
+          "lat": 29.3375,
+          "lng": 48.0281,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "As Salimiyah, محافظة حولي",
+          "lat": 29.3336,
+          "lng": 48.0766,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        }
+      ]
+    },
+    {
+      "name": "Lebanon",
+      "code": "LB",
+      "cities": [
+        {
+          "name": "Beirut, محافظة بيروت",
+          "lat": 33.8938,
+          "lng": 35.5018,
+          "timezone": 2.0,
+          "iana_tz": "Asia/Beirut"
+        },
+        {
+          "name": "Tripoli, محافظة الشمال",
+          "lat": 34.4372,
+          "lng": 35.8433,
+          "timezone": 2.0,
+          "iana_tz": "Asia/Beirut"
+        },
+        {
+          "name": "Sidon",
+          "lat": 33.5633,
+          "lng": 35.365,
+          "timezone": 2.0,
+          "iana_tz": "Asia/Beirut"
+        },
+        {
+          "name": "Tyre, محافظة الجنوب",
+          "lat": 33.2704,
+          "lng": 35.2038,
+          "timezone": 2.0,
+          "iana_tz": "Asia/Beirut"
+        }
+      ]
+    },
+    {
+      "name": "Malaysia",
+      "code": "MY",
+      "cities": [
+        {
+          "name": "Kuala Lumpur, Kuala Lumpur",
+          "lat": 3.139,
+          "lng": 101.6869,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "George Town, Pulau Pinang",
+          "lat": 5.4164,
+          "lng": 100.3327,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Ipoh, Perak",
+          "lat": 4.5975,
+          "lng": 101.0901,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Shah Alam, Selangor",
+          "lat": 3.0733,
+          "lng": 101.5185,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Petaling Jaya, Selangor",
+          "lat": 3.1073,
+          "lng": 101.6067,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Johor Bahru, Johor",
+          "lat": 1.4927,
+          "lng": 103.7414,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        }
+      ]
+    },
+    {
+      "name": "Mexico",
+      "code": "MX",
+      "cities": [
+        {
+          "name": "Mexico City, Ciudad de México",
+          "lat": 19.4326,
+          "lng": -99.1332,
+          "timezone": -6.0,
+          "iana_tz": "America/Mexico_City"
+        },
+        {
+          "name": "Guadalajara, Jalisco",
+          "lat": 20.6597,
+          "lng": -103.3496,
+          "timezone": -6.0,
+          "iana_tz": "America/Mexico_City"
+        },
+        {
+          "name": "Monterrey, Nuevo León",
+          "lat": 25.6866,
+          "lng": -100.3161,
+          "timezone": -6.0,
+          "iana_tz": "America/Mexico_City"
+        },
+        {
+          "name": "Puebla, Puebla",
+          "lat": 19.0414,
+          "lng": -98.2063,
+          "timezone": -6.0,
+          "iana_tz": "America/Mexico_City"
+        },
+        {
+          "name": "Tijuana, Baja California",
+          "lat": 32.5027,
+          "lng": -117.0073,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "León, Guanajuato",
+          "lat": 21.1619,
+          "lng": -101.6947,
+          "timezone": -6.0,
+          "iana_tz": "America/Mexico_City"
+        },
+        {
+          "name": "Juárez, Chihuahua",
+          "lat": 31.6904,
+          "lng": -106.4245,
+          "timezone": -7.0,
+          "iana_tz": "America/Denver"
+        },
+        {
+          "name": "Cancún, Quintana Roo",
+          "lat": 21.1619,
+          "lng": -86.8515,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        }
+      ]
+    },
+    {
+      "name": "Morocco",
+      "code": "MA",
+      "cities": [
+        {
+          "name": "Casablanca, Casablanca-Settat ⵜⴰⴷⴷⴰⵔⵜ ⵜⵓⵎⵍⵉⵍⵜ-ⵙⵟⵟⴰⵜ الدار البيضاء-سطات",
+          "lat": 33.5731,
+          "lng": -7.5898,
+          "timezone": 0.0,
+          "iana_tz": "Africa/Casablanca"
+        },
+        {
+          "name": "Rabat, Rabat-Salé-Kénitra ⵔⴱⴰⵟ-ⵙⵍⴰ-ⵇⵏⵉⵟⵔⴰ الرباط-سلا-القنيطرة",
+          "lat": 34.0209,
+          "lng": -6.8416,
+          "timezone": 0.0,
+          "iana_tz": "Africa/Casablanca"
+        },
+        {
+          "name": "Marrakech, Marrakech-Safi ⵎⵕⵕⴰⴽⵛ-ⴰⵙⴼⵉ مراكش-أسفي",
+          "lat": 31.6295,
+          "lng": -7.9811,
+          "timezone": 0.0,
+          "iana_tz": "Africa/Casablanca"
+        },
+        {
+          "name": "Fez, Fès-Meknès ⴼⴰⵙ-ⵎⴽⵏⴰⵙ فاس-مكناس",
+          "lat": 34.0181,
+          "lng": -5.0078,
+          "timezone": 0.0,
+          "iana_tz": "Africa/Casablanca"
+        },
+        {
+          "name": "Tangier, Tanger-Tétouan-Al Hoceïma ⵟⴰⵏⵊ-ⵟⵉⵜⴰⵡⵉⵏ-ⵍⵃⵓⵙⵉⵎⴰ طنجة تطوان الحسيمة",
+          "lat": 35.7595,
+          "lng": -5.834,
+          "timezone": 0.0,
+          "iana_tz": "Africa/Casablanca"
+        }
+      ]
+    },
+    {
+      "name": "Netherlands",
+      "code": "NL",
+      "cities": [
+        {
+          "name": "Amsterdam, Noord-Holland",
+          "lat": 52.3676,
+          "lng": 4.9041,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Rotterdam, Zuid-Holland",
+          "lat": 51.9244,
+          "lng": 4.4777,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "The Hague, Zuid-Holland",
+          "lat": 52.0705,
+          "lng": 4.3007,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Utrecht, Utrecht",
+          "lat": 52.0907,
+          "lng": 5.1214,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Eindhoven, Noord-Brabant",
+          "lat": 51.4416,
+          "lng": 5.4697,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "New Zealand",
+      "code": "NZ",
+      "cities": [
+        {
+          "name": "Auckland, Auckland",
+          "lat": -36.8485,
+          "lng": 174.7633,
+          "timezone": 12.0,
+          "iana_tz": "Pacific/Auckland"
+        },
+        {
+          "name": "Wellington, Wellington",
+          "lat": -41.2865,
+          "lng": 174.7762,
+          "timezone": 12.0,
+          "iana_tz": "Pacific/Auckland"
+        },
+        {
+          "name": "Christchurch, Canterbury",
+          "lat": -43.5321,
+          "lng": 172.6362,
+          "timezone": 12.0,
+          "iana_tz": "Pacific/Auckland"
+        },
+        {
+          "name": "Hamilton, Waikato",
+          "lat": -37.787,
+          "lng": 175.2793,
+          "timezone": 12.0,
+          "iana_tz": "Pacific/Auckland"
+        },
+        {
+          "name": "Tauranga, Bay of Plenty",
+          "lat": -37.6878,
+          "lng": 176.1651,
+          "timezone": 12.0,
+          "iana_tz": "Pacific/Auckland"
+        }
+      ]
+    },
+    {
+      "name": "Nigeria",
+      "code": "NG",
+      "cities": [
+        {
+          "name": "Lagos, Lagos",
+          "lat": 6.5244,
+          "lng": 3.3792,
+          "timezone": 1.0,
+          "iana_tz": "Africa/Lagos"
+        },
+        {
+          "name": "Kano, Kano",
+          "lat": 12.0022,
+          "lng": 8.592,
+          "timezone": 1.0,
+          "iana_tz": "Africa/Lagos"
+        },
+        {
+          "name": "Ibadan, Oyo",
+          "lat": 7.3775,
+          "lng": 3.947,
+          "timezone": 1.0,
+          "iana_tz": "Africa/Lagos"
+        },
+        {
+          "name": "Abuja, Federal Capital Territory",
+          "lat": 9.0579,
+          "lng": 7.4951,
+          "timezone": 1.0,
+          "iana_tz": "Africa/Lagos"
+        },
+        {
+          "name": "Port Harcourt, Rivers",
+          "lat": 4.8156,
+          "lng": 7.0498,
+          "timezone": 1.0,
+          "iana_tz": "Africa/Lagos"
+        },
+        {
+          "name": "Benin City, Edo",
+          "lat": 6.335,
+          "lng": 5.6037,
+          "timezone": 1.0,
+          "iana_tz": "Africa/Lagos"
+        }
+      ]
+    },
+    {
+      "name": "Norway",
+      "code": "NO",
+      "cities": [
+        {
+          "name": "Oslo",
+          "lat": 59.9139,
+          "lng": 10.7522,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Bergen, Vestland",
+          "lat": 60.3913,
+          "lng": 5.3221,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Trondheim, Trøndelag",
+          "lat": 63.4305,
+          "lng": 10.3951,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Stavanger, Rogaland",
+          "lat": 58.97,
+          "lng": 5.7331,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Peru",
+      "code": "PE",
+      "cities": [
+        {
+          "name": "Lima, Lima",
+          "lat": -12.0464,
+          "lng": -77.0428,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        },
+        {
+          "name": "Arequipa, Arequipa",
+          "lat": -16.409,
+          "lng": -71.5375,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        },
+        {
+          "name": "Trujillo, La Libertad",
+          "lat": -8.1116,
+          "lng": -79.0287,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        },
+        {
+          "name": "Chiclayo, Lambayeque",
+          "lat": -6.7714,
+          "lng": -79.8391,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        },
+        {
+          "name": "Cusco, Cusco",
+          "lat": -13.532,
+          "lng": -71.9675,
+          "timezone": -5.0,
+          "iana_tz": "America/Lima"
+        }
+      ]
+    },
+    {
+      "name": "Philippines",
+      "code": "PH",
+      "cities": [
+        {
+          "name": "Manila, Metro Manila",
+          "lat": 14.5995,
+          "lng": 120.9842,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Quezon City, Metro Manila",
+          "lat": 14.676,
+          "lng": 121.0437,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Davao City, Davao Region",
+          "lat": 7.0731,
+          "lng": 125.6128,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Cebu City, Central Visayas",
+          "lat": 10.3157,
+          "lng": 123.8854,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Zamboanga City, Zamboanga Peninsula",
+          "lat": 6.9214,
+          "lng": 122.079,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Antipolo, Rizal",
+          "lat": 14.5932,
+          "lng": 121.1815,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Pasig, Metro Manila",
+          "lat": 14.5764,
+          "lng": 121.0851,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Taguig, Metro Manila",
+          "lat": 14.5176,
+          "lng": 121.0509,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        }
+      ]
+    },
+    {
+      "name": "Poland",
+      "code": "PL",
+      "cities": [
+        {
+          "name": "Warsaw, województwo mazowieckie",
+          "lat": 52.2297,
+          "lng": 21.0122,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Krakow, województwo małopolskie",
+          "lat": 50.0647,
+          "lng": 19.945,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Łódź, województwo łódzkie",
+          "lat": 51.7592,
+          "lng": 19.456,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Wrocław, województwo dolnośląskie",
+          "lat": 51.1079,
+          "lng": 17.0385,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Poznań, województwo wielkopolskie",
+          "lat": 52.4064,
+          "lng": 16.9252,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Gdańsk, województwo pomorskie",
+          "lat": 54.352,
+          "lng": 18.6466,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Portugal",
+      "code": "PT",
+      "cities": [
+        {
+          "name": "Lisbon, Lisboa",
+          "lat": 38.7223,
+          "lng": -9.1393,
+          "timezone": 0.0,
+          "iana_tz": "Europe/Lisbon"
+        },
+        {
+          "name": "Porto, Porto",
+          "lat": 41.1579,
+          "lng": -8.6291,
+          "timezone": 0.0,
+          "iana_tz": "Europe/Lisbon"
+        },
+        {
+          "name": "Vila Nova de Gaia, Porto",
+          "lat": 41.1239,
+          "lng": -8.6118,
+          "timezone": 0.0,
+          "iana_tz": "Europe/Lisbon"
+        },
+        {
+          "name": "Amadora, Lisboa",
+          "lat": 38.7538,
+          "lng": -9.2307,
+          "timezone": 0.0,
+          "iana_tz": "Europe/Lisbon"
+        }
+      ]
+    },
+    {
+      "name": "Qatar",
+      "code": "QA",
+      "cities": [
+        {
+          "name": "Doha",
+          "lat": 25.2854,
+          "lng": 51.531,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Al Rayyan, الريان",
+          "lat": 25.2919,
+          "lng": 51.424,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Umm Salal, أم صلال",
+          "lat": 25.4059,
+          "lng": 51.4059,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Al Wakrah",
+          "lat": 25.1654,
+          "lng": 51.6034,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        }
+      ]
+    },
+    {
+      "name": "Romania",
+      "code": "RO",
+      "cities": [
+        {
+          "name": "Bucharest",
+          "lat": 44.4268,
+          "lng": 26.1025,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Cluj-Napoca, Cluj",
+          "lat": 46.7712,
+          "lng": 23.6236,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Timișoara, Timiș",
+          "lat": 45.7489,
+          "lng": 21.2087,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Iași, Iași",
+          "lat": 47.1585,
+          "lng": 27.6014,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Constanța, Constanța",
+          "lat": 44.1598,
+          "lng": 28.6348,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        }
+      ]
+    },
+    {
+      "name": "Russia",
+      "code": "RU",
+      "cities": [
+        {
+          "name": "Moscow, Москва",
+          "lat": 55.7558,
+          "lng": 37.6173,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Saint Petersburg, Санкт-Петербург",
+          "lat": 59.9311,
+          "lng": 30.3609,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Novosibirsk, Новосибирская область",
+          "lat": 55.0084,
+          "lng": 82.9357,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Yekaterinburg, Свердловская область",
+          "lat": 56.8431,
+          "lng": 60.6454,
+          "timezone": 5.0,
+          "iana_tz": "Asia/Karachi"
+        },
+        {
+          "name": "Nizhny Novgorod, Нижегородская область",
+          "lat": 56.2965,
+          "lng": 43.9361,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Kazan, Татарстан",
+          "lat": 55.8304,
+          "lng": 49.0661,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Chelyabinsk, Челябинская область",
+          "lat": 55.1644,
+          "lng": 61.4368,
+          "timezone": 5.0,
+          "iana_tz": "Asia/Karachi"
+        },
+        {
+          "name": "Omsk, Омская область",
+          "lat": 54.9884,
+          "lng": 73.3242,
+          "timezone": 6.0,
+          "iana_tz": "Asia/Dhaka"
+        },
+        {
+          "name": "Samara, Самарская область",
+          "lat": 53.2001,
+          "lng": 50.15,
+          "timezone": 4.0,
+          "iana_tz": "Asia/Dubai"
+        },
+        {
+          "name": "Rostov-on-Don, Ростовская область",
+          "lat": 47.2357,
+          "lng": 39.7015,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        }
+      ]
+    },
+    {
+      "name": "Saudi Arabia",
+      "code": "SA",
+      "cities": [
+        {
+          "name": "Riyadh, منطقة الرياض",
+          "lat": 24.7136,
+          "lng": 46.6753,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Jeddah, منطقة مكة المكرمة",
+          "lat": 21.4858,
+          "lng": 39.1925,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Mecca, منطقة مكة المكرمة",
+          "lat": 21.3891,
+          "lng": 39.8579,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Medina, منطقة المدينة المنورة",
+          "lat": 24.5247,
+          "lng": 39.5692,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Dammam, المنطقة الشرقية",
+          "lat": 26.3927,
+          "lng": 49.9777,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Khobar, المنطقة الشرقية",
+          "lat": 26.279,
+          "lng": 50.208,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        }
+      ]
+    },
+    {
+      "name": "Singapore",
+      "code": "SG",
+      "cities": [
+        {
+          "name": "Singapore",
+          "lat": 1.3521,
+          "lng": 103.8198,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        }
+      ]
+    },
+    {
+      "name": "South Africa",
+      "code": "ZA",
+      "cities": [
+        {
+          "name": "Johannesburg, Gauteng",
+          "lat": -26.2041,
+          "lng": 28.0473,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Johannesburg"
+        },
+        {
+          "name": "Cape Town, Western Cape",
+          "lat": -33.9249,
+          "lng": 18.4241,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Johannesburg"
+        },
+        {
+          "name": "Durban, KwaZulu-Natal",
+          "lat": -29.8587,
+          "lng": 31.0218,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Johannesburg"
+        },
+        {
+          "name": "Pretoria, Gauteng",
+          "lat": -25.7479,
+          "lng": 28.2293,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Johannesburg"
+        },
+        {
+          "name": "Port Elizabeth, Eastern Cape",
+          "lat": -33.9608,
+          "lng": 25.6022,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Johannesburg"
+        },
+        {
+          "name": "Pietermaritzburg, KwaZulu-Natal",
+          "lat": -29.6144,
+          "lng": 30.3929,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Johannesburg"
+        }
+      ]
+    },
+    {
+      "name": "Spain",
+      "code": "ES",
+      "cities": [
+        {
+          "name": "Madrid, Comunidad de Madrid",
+          "lat": 40.4168,
+          "lng": -3.7038,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Barcelona, Catalunya",
+          "lat": 41.3851,
+          "lng": 2.1734,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Valencia, Comunitat Valenciana",
+          "lat": 39.4699,
+          "lng": -0.3763,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Seville, Andalucía",
+          "lat": 37.3891,
+          "lng": -5.9845,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Zaragoza, Aragón",
+          "lat": 41.6488,
+          "lng": -0.8891,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Málaga, Andalucía",
+          "lat": 36.7213,
+          "lng": -4.4214,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Murcia, Región de Murcia",
+          "lat": 37.9922,
+          "lng": -1.1307,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Palma, Illes Balears",
+          "lat": 39.5696,
+          "lng": 2.6502,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Las Palmas, Canarias",
+          "lat": 28.1248,
+          "lng": -15.43,
+          "timezone": 0.0,
+          "iana_tz": "Europe/Lisbon"
+        },
+        {
+          "name": "Bilbao, Euskadi",
+          "lat": 43.2627,
+          "lng": -2.9253,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Sri Lanka",
+      "code": "LK",
+      "cities": [
+        {
+          "name": "Colombo, Western Province",
+          "lat": 6.9271,
+          "lng": 79.8612,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Dehiwala-Mount Lavinia, Western Province",
+          "lat": 6.8344,
+          "lng": 79.8707,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Moratuwa, Western Province",
+          "lat": 6.773,
+          "lng": 79.9014,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Negombo, Western Province",
+          "lat": 7.2083,
+          "lng": 79.8358,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kandy, Central Province",
+          "lat": 7.2906,
+          "lng": 80.6337,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        }
+      ]
+    },
+    {
+      "name": "Sweden",
+      "code": "SE",
+      "cities": [
+        {
+          "name": "Stockholm, Stockholms län",
+          "lat": 59.3293,
+          "lng": 18.0686,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Gothenburg, Västra Götalands län",
+          "lat": 57.7089,
+          "lng": 11.9746,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Malmö, Skåne län",
+          "lat": 55.605,
+          "lng": 13.0038,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Uppsala, Uppsala län",
+          "lat": 59.8586,
+          "lng": 17.6389,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Switzerland",
+      "code": "CH",
+      "cities": [
+        {
+          "name": "Zurich, Zürich",
+          "lat": 47.3769,
+          "lng": 8.5417,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Geneva, Genève",
+          "lat": 46.2044,
+          "lng": 6.1432,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Basel, Basel-Stadt",
+          "lat": 47.5596,
+          "lng": 7.5886,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Lausanne, Vaud",
+          "lat": 46.5197,
+          "lng": 6.6323,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        },
+        {
+          "name": "Bern, Bern/Berne",
+          "lat": 46.9481,
+          "lng": 7.4474,
+          "timezone": 1.0,
+          "iana_tz": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "name": "Syria",
+      "code": "SY",
+      "cities": [
+        {
+          "name": "Damascus, محافظة دمشق",
+          "lat": 33.5138,
+          "lng": 36.2765,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Aleppo, محافظة حلب",
+          "lat": 36.2021,
+          "lng": 37.1343,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Homs, محافظة حمص",
+          "lat": 34.7394,
+          "lng": 36.7201,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Latakia, محافظة اللاذقية",
+          "lat": 35.5311,
+          "lng": 35.7831,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Moscow"
+        }
+      ]
+    },
+    {
+      "name": "Taiwan",
+      "code": "TW",
+      "cities": [
+        {
+          "name": "Taipei",
+          "lat": 25.033,
+          "lng": 121.5654,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Kaohsiung",
+          "lat": 22.6273,
+          "lng": 120.3014,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Taichung",
+          "lat": 24.1477,
+          "lng": 120.6736,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Tainan",
+          "lat": 22.9997,
+          "lng": 120.227,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        },
+        {
+          "name": "Taoyuan",
+          "lat": 24.9936,
+          "lng": 121.301,
+          "timezone": 8.0,
+          "iana_tz": "Asia/Manila"
+        }
+      ]
+    },
+    {
+      "name": "Thailand",
+      "code": "TH",
+      "cities": [
+        {
+          "name": "Bangkok",
+          "lat": 13.7563,
+          "lng": 100.5018,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Nonthaburi, อำเภอเมืองนนทบุรี",
+          "lat": 13.8621,
+          "lng": 100.5144,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Nakhon Ratchasima, อำเภอเมืองนครราชสีมา",
+          "lat": 14.9799,
+          "lng": 102.0977,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Chiang Mai, อำเภอเมืองเชียงใหม่",
+          "lat": 18.7883,
+          "lng": 98.9853,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Hat Yai, อำเภอหาดใหญ่",
+          "lat": 7.0167,
+          "lng": 100.4667,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Udon Thani, อำเภอเมืองอุดรธานี",
+          "lat": 17.4138,
+          "lng": 102.7958,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        }
+      ]
+    },
+    {
+      "name": "Turkey",
+      "code": "TR",
+      "cities": [
+        {
+          "name": "Istanbul, Marmara Bölgesi",
+          "lat": 41.0082,
+          "lng": 28.9784,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Ankara, İç Anadolu Bölgesi",
+          "lat": 39.9334,
+          "lng": 32.8597,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Izmir, Ege Bölgesi",
+          "lat": 38.4192,
+          "lng": 27.1287,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Bursa, Marmara Bölgesi",
+          "lat": 40.1826,
+          "lng": 29.0665,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Adana, Akdeniz Bölgesi",
+          "lat": 37.0,
+          "lng": 35.3213,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Gaziantep, Güneydoğu Anadolu Bölgesi",
+          "lat": 37.0662,
+          "lng": 37.3833,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Konya, İç Anadolu Bölgesi",
+          "lat": 37.8713,
+          "lng": 32.4846,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        }
+      ]
+    },
+    {
+      "name": "Ukraine",
+      "code": "UA",
+      "cities": [
+        {
+          "name": "Kyiv",
+          "lat": 50.4501,
+          "lng": 30.5234,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Kharkiv, Харківська область",
+          "lat": 49.9935,
+          "lng": 36.2304,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Odessa, Одеська область",
+          "lat": 46.4825,
+          "lng": 30.7233,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Dnipro, Дніпропетровська область",
+          "lat": 48.4647,
+          "lng": 35.0462,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Donetsk, Донецька область",
+          "lat": 48.0159,
+          "lng": 37.8031,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Zaporizhzhia, Запорізька область",
+          "lat": 47.8388,
+          "lng": 35.1396,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        },
+        {
+          "name": "Lviv, Львівська область",
+          "lat": 49.8397,
+          "lng": 24.0297,
+          "timezone": 2.0,
+          "iana_tz": "Europe/Athens"
+        }
+      ]
+    },
+    {
+      "name": "United Arab Emirates",
+      "code": "AE",
+      "cities": [
+        {
+          "name": "Dubai, دبي",
+          "lat": 25.2048,
+          "lng": 55.2708,
+          "timezone": 4.0,
+          "iana_tz": "Asia/Dubai"
+        },
+        {
+          "name": "Abu Dhabi, أبو ظبي",
+          "lat": 24.2532,
+          "lng": 54.3707,
+          "timezone": 4.0,
+          "iana_tz": "Asia/Dubai"
+        },
+        {
+          "name": "Sharjah, الشارقة",
+          "lat": 25.3463,
+          "lng": 55.4209,
+          "timezone": 4.0,
+          "iana_tz": "Asia/Dubai"
+        },
+        {
+          "name": "Al Ain, أبو ظبي",
+          "lat": 24.191,
+          "lng": 55.761,
+          "timezone": 4.0,
+          "iana_tz": "Asia/Dubai"
+        },
+        {
+          "name": "Ajman, إمارة عجمان",
+          "lat": 25.4052,
+          "lng": 55.5136,
+          "timezone": 4.0,
+          "iana_tz": "Asia/Dubai"
+        }
+      ]
+    },
+    {
+      "name": "United Kingdom",
+      "code": "GB",
+      "cities": [
+        {
+          "name": "London, England",
+          "lat": 51.5074,
+          "lng": -0.1278,
+          "timezone": 0.0,
+          "iana_tz": "Europe/London"
+        },
+        {
+          "name": "Birmingham, England",
+          "lat": 52.4862,
+          "lng": -1.8904,
+          "timezone": 0.0,
+          "iana_tz": "Europe/London"
+        },
+        {
+          "name": "Manchester, England",
+          "lat": 53.4808,
+          "lng": -2.2426,
+          "timezone": 0.0,
+          "iana_tz": "Europe/London"
+        },
+        {
+          "name": "Glasgow, Alba / Scotland",
+          "lat": 55.8642,
+          "lng": -4.2518,
+          "timezone": 0.0,
+          "iana_tz": "Europe/London"
+        },
+        {
+          "name": "Liverpool, England",
+          "lat": 53.4084,
+          "lng": -2.9916,
+          "timezone": 0.0,
+          "iana_tz": "Europe/London"
+        },
+        {
+          "name": "Leeds, England",
+          "lat": 53.8008,
+          "lng": -1.5491,
+          "timezone": 0.0,
+          "iana_tz": "Europe/London"
+        },
+        {
+          "name": "Sheffield, England",
+          "lat": 53.3811,
+          "lng": -1.4701,
+          "timezone": 0.0,
+          "iana_tz": "Europe/London"
+        },
+        {
+          "name": "Edinburgh, Alba / Scotland",
+          "lat": 55.9533,
+          "lng": -3.1883,
+          "timezone": 0.0,
+          "iana_tz": "Europe/London"
+        },
+        {
+          "name": "Bristol, England",
+          "lat": 51.4545,
+          "lng": -2.5879,
+          "timezone": 0.0,
+          "iana_tz": "Europe/London"
+        },
+        {
+          "name": "Cardiff, Cymru / Wales",
+          "lat": 51.4816,
+          "lng": -3.1791,
+          "timezone": 0.0,
+          "iana_tz": "Europe/London"
+        }
+      ]
+    },
+    {
+      "name": "United States",
+      "code": "US",
+      "cities": [
+        {
+          "name": "New York, New York",
+          "lat": 40.7128,
+          "lng": -74.006,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "California, California",
+          "lat": 34.0522,
+          "lng": -118.2437,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Glendale, Arizona",
+          "lat": 33.5387,
+          "lng": -112.186,
+          "timezone": -7.0,
+          "iana_tz": "America/Phoenix"
+        },
+        {
+          "name": "Hartford, Connecticut",
+          "lat": 41.7658,
+          "lng": -72.6734,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Herndon, Virginia",
+          "lat": 38.9696,
+          "lng": -77.3861,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Virginia, Virginia",
+          "lat": 37.4316,
+          "lng": -78.6569,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Los Angeles, California",
+          "lat": 34.0522,
+          "lng": -118.2437,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Chicago, Illinois",
+          "lat": 41.8781,
+          "lng": -87.6298,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Houston, Texas",
+          "lat": 29.7604,
+          "lng": -95.3698,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Galveston, Texas",
+          "lat": 29.3013,
+          "lng": -94.7977,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Phoenix, Arizona",
+          "lat": 33.4484,
+          "lng": -112.074,
+          "timezone": -7.0,
+          "iana_tz": "America/Phoenix"
+        },
+        {
+          "name": "Philadelphia, Pennsylvania",
+          "lat": 39.9526,
+          "lng": -75.1652,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "San Antonio, Texas",
+          "lat": 29.4241,
+          "lng": -98.4936,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "San Diego, California",
+          "lat": 32.7157,
+          "lng": -117.1611,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Dallas, Texas",
+          "lat": 32.7767,
+          "lng": -96.797,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "San Jose, California",
+          "lat": 37.3382,
+          "lng": -121.8863,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Austin, Texas",
+          "lat": 30.2672,
+          "lng": -97.7431,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Jacksonville, Florida",
+          "lat": 30.3322,
+          "lng": -81.6557,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Fort Worth, Texas",
+          "lat": 32.7555,
+          "lng": -97.3308,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Columbus, Ohio",
+          "lat": 39.9612,
+          "lng": -82.9988,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Charlotte, North Carolina",
+          "lat": 35.2271,
+          "lng": -80.8431,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "San Francisco, California",
+          "lat": 37.7749,
+          "lng": -122.4194,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Indianapolis, Indiana",
+          "lat": 39.7684,
+          "lng": -86.1581,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Seattle, Washington",
+          "lat": 47.6062,
+          "lng": -122.3321,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Denver, Colorado",
+          "lat": 39.7392,
+          "lng": -104.9903,
+          "timezone": -7.0,
+          "iana_tz": "America/Denver"
+        },
+        {
+          "name": "Washington, District of Columbia",
+          "lat": 38.9072,
+          "lng": -77.0369,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Boston, Massachusetts",
+          "lat": 42.3601,
+          "lng": -71.0589,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "El Paso, Texas",
+          "lat": 31.7619,
+          "lng": -106.485,
+          "timezone": -7.0,
+          "iana_tz": "America/Denver"
+        },
+        {
+          "name": "Detroit, Michigan",
+          "lat": 42.3314,
+          "lng": -83.0458,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Nashville, Tennessee",
+          "lat": 36.1627,
+          "lng": -86.7816,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Portland, Oregon",
+          "lat": 45.5152,
+          "lng": -122.6784,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Memphis, Tennessee",
+          "lat": 35.1495,
+          "lng": -90.049,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Oklahoma City, Oklahoma",
+          "lat": 35.4676,
+          "lng": -97.5164,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Las Vegas, Nevada",
+          "lat": 36.1699,
+          "lng": -115.1398,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Louisville, Kentucky",
+          "lat": 38.2527,
+          "lng": -85.7585,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Baltimore, Maryland",
+          "lat": 39.2904,
+          "lng": -76.6122,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Milwaukee, Wisconsin",
+          "lat": 43.0389,
+          "lng": -87.9065,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Albuquerque, New Mexico",
+          "lat": 35.0844,
+          "lng": -106.6504,
+          "timezone": -7.0,
+          "iana_tz": "America/Denver"
+        },
+        {
+          "name": "Tucson, Arizona",
+          "lat": 32.2226,
+          "lng": -110.9747,
+          "timezone": -7.0,
+          "iana_tz": "America/Phoenix"
+        },
+        {
+          "name": "Fresno, California",
+          "lat": 36.7378,
+          "lng": -119.7871,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Sacramento, California",
+          "lat": 38.5816,
+          "lng": -121.4944,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Kansas City, Missouri",
+          "lat": 39.0997,
+          "lng": -94.5786,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Mesa, Arizona",
+          "lat": 33.4152,
+          "lng": -111.8315,
+          "timezone": -7.0,
+          "iana_tz": "America/Phoenix"
+        },
+        {
+          "name": "Atlanta, Georgia",
+          "lat": 33.749,
+          "lng": -84.388,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Colorado Springs, Colorado",
+          "lat": 38.8339,
+          "lng": -104.8214,
+          "timezone": -7.0,
+          "iana_tz": "America/Denver"
+        },
+        {
+          "name": "Raleigh, North Carolina",
+          "lat": 35.7796,
+          "lng": -78.6382,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Omaha, Nebraska",
+          "lat": 41.2565,
+          "lng": -95.9345,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Miami, Florida",
+          "lat": 25.7617,
+          "lng": -80.1918,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Long Beach, California",
+          "lat": 33.7701,
+          "lng": -118.1937,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Virginia Beach, Virginia",
+          "lat": 36.8529,
+          "lng": -75.978,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Oakland, California",
+          "lat": 37.8044,
+          "lng": -122.2712,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Minneapolis, Minnesota",
+          "lat": 44.9778,
+          "lng": -93.265,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Tulsa, Oklahoma",
+          "lat": 36.154,
+          "lng": -95.9928,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Arlington, Texas",
+          "lat": 32.7357,
+          "lng": -97.1081,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Tampa, Florida",
+          "lat": 27.9506,
+          "lng": -82.4572,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "New London, Connecticut",
+          "lat": 41.3554,
+          "lng": -72.0995,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "New Orleans, Louisiana",
+          "lat": 29.9511,
+          "lng": -90.0715,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Wichita, Kansas",
+          "lat": 37.6872,
+          "lng": -97.3301,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Cleveland, Ohio",
+          "lat": 41.4993,
+          "lng": -81.6944,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Bakersfield, California",
+          "lat": 35.3733,
+          "lng": -119.0187,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Aurora, Colorado",
+          "lat": 39.7294,
+          "lng": -104.8319,
+          "timezone": -7.0,
+          "iana_tz": "America/Denver"
+        },
+        {
+          "name": "Anaheim, California",
+          "lat": 33.8366,
+          "lng": -117.9143,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Honolulu, Hawaii",
+          "lat": 21.3099,
+          "lng": -157.8581,
+          "timezone": -10.0,
+          "iana_tz": "Pacific/Honolulu"
+        },
+        {
+          "name": "Santa Ana, California",
+          "lat": 33.7455,
+          "lng": -117.8677,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Riverside, California",
+          "lat": 33.9533,
+          "lng": -117.3962,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Corpus Christi, Texas",
+          "lat": 27.8006,
+          "lng": -97.3964,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Lexington, Kentucky",
+          "lat": 38.0406,
+          "lng": -84.5037,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Henderson, Nevada",
+          "lat": 36.0395,
+          "lng": -114.9817,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Stockton, California",
+          "lat": 37.9577,
+          "lng": -121.2908,
+          "timezone": -8.0,
+          "iana_tz": "America/Los_Angeles"
+        },
+        {
+          "name": "Saint Paul, Minnesota",
+          "lat": 44.9537,
+          "lng": -93.09,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "St. Louis, Missouri",
+          "lat": 38.627,
+          "lng": -90.1994,
+          "timezone": -6.0,
+          "iana_tz": "America/Chicago"
+        },
+        {
+          "name": "Cincinnati, Ohio",
+          "lat": 39.1031,
+          "lng": -84.512,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Pittsburgh, Pennsylvania",
+          "lat": 40.4406,
+          "lng": -79.9959,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        },
+        {
+          "name": "Reston, Virginia",
+          "lat": 38.9586,
+          "lng": -77.3627,
+          "timezone": -5.0,
+          "iana_tz": "America/New_York"
+        }
+      ]
+    },
+    {
+      "name": "Uruguay",
+      "code": "UY",
+      "cities": [
+        {
+          "name": "Montevideo, Montevideo",
+          "lat": -34.9011,
+          "lng": -56.1645,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Salto, Salto",
+          "lat": -31.3833,
+          "lng": -57.9667,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Ciudad de la Costa, Canelones",
+          "lat": -34.8233,
+          "lng": -55.95,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        },
+        {
+          "name": "Paysandú, Paysandú",
+          "lat": -32.3167,
+          "lng": -58.0833,
+          "timezone": -3.0,
+          "iana_tz": "America/Sao_Paulo"
+        }
+      ]
+    },
+    {
+      "name": "Venezuela",
+      "code": "VE",
+      "cities": [
+        {
+          "name": "Caracas, Distrito Capital",
+          "lat": 10.4806,
+          "lng": -66.9036,
+          "timezone": -4.0,
+          "iana_tz": "America/Caracas"
+        },
+        {
+          "name": "Maracaibo, Zulia",
+          "lat": 10.6316,
+          "lng": -71.6444,
+          "timezone": -4.0,
+          "iana_tz": "America/Caracas"
+        },
+        {
+          "name": "Valencia, Carabobo",
+          "lat": 10.1621,
+          "lng": -68.0078,
+          "timezone": -4.0,
+          "iana_tz": "America/Caracas"
+        },
+        {
+          "name": "Barquisimeto, Lara",
+          "lat": 10.0647,
+          "lng": -69.357,
+          "timezone": -4.0,
+          "iana_tz": "America/Caracas"
+        },
+        {
+          "name": "Maracay, Aragua",
+          "lat": 10.2353,
+          "lng": -67.5911,
+          "timezone": -4.0,
+          "iana_tz": "America/Caracas"
+        }
+      ]
+    },
+    {
+      "name": "Vietnam",
+      "code": "VN",
+      "cities": [
+        {
+          "name": "Ho Chi Minh City",
+          "lat": 10.8231,
+          "lng": 106.6297,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Hanoi",
+          "lat": 21.0285,
+          "lng": 105.8542,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Can Tho",
+          "lat": 10.0452,
+          "lng": 105.7469,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Hai Phong",
+          "lat": 20.8449,
+          "lng": 106.6881,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        },
+        {
+          "name": "Da Nang",
+          "lat": 16.0544,
+          "lng": 108.2022,
+          "timezone": 7.0,
+          "iana_tz": "Asia/Jakarta"
+        }
+      ]
+    },
+    {
+      "name": "Yemen",
+      "code": "YE",
+      "cities": [
+        {
+          "name": "Sana'a, أمانة العاصمة",
+          "lat": 15.3694,
+          "lng": 44.191,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Aden, محافظة عدن",
+          "lat": 12.7794,
+          "lng": 45.0367,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Taiz",
+          "lat": 13.5795,
+          "lng": 44.0394,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        },
+        {
+          "name": "Al Hudaydah, محافظة الحديدة",
+          "lat": 14.7978,
+          "lng": 42.9545,
+          "timezone": 3.0,
+          "iana_tz": "Europe/Moscow"
+        }
+      ]
+    },
+    {
+      "name": "Zimbabwe",
+      "code": "ZW",
+      "cities": [
+        {
+          "name": "Harare, Harare Province",
+          "lat": -17.8292,
+          "lng": 31.0522,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Johannesburg"
+        },
+        {
+          "name": "Bulawayo, Bulawayo Province",
+          "lat": -20.1594,
+          "lng": 28.5886,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Johannesburg"
+        },
+        {
+          "name": "Chitungwiza, Harare Province",
+          "lat": -18.0133,
+          "lng": 31.0725,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Johannesburg"
+        },
+        {
+          "name": "Mutare, Manicaland",
+          "lat": -18.9707,
+          "lng": 32.6473,
+          "timezone": 2.0,
+          "iana_tz": "Africa/Johannesburg"
+        }
+      ]
+    }
+  ]
+}
