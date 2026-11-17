@@ -1511,6 +1511,1161 @@
           "lng": 82.2475,
           "timezone": 5.5,
           "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Srikakulam, Andhra Pradesh",
+          "lat": 18.2989,
+          "lng": 83.8975,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Vizianagaram, Andhra Pradesh",
+          "lat": 18.1169,
+          "lng": 83.4115,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Paderu, Andhra Pradesh",
+          "lat": 18.0833,
+          "lng": 82.6667,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Anakapalli, Andhra Pradesh",
+          "lat": 17.6913,
+          "lng": 83.004,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Amalapuram, Andhra Pradesh",
+          "lat": 16.5787,
+          "lng": 82.0061,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Rajahmundry (Rajamahendravaram), Andhra Pradesh",
+          "lat": 17.0052,
+          "lng": 81.7778,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Eluru, Andhra Pradesh",
+          "lat": 16.7131,
+          "lng": 81.1044,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bhimavaram, Andhra Pradesh",
+          "lat": 16.5408,
+          "lng": 81.5232,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Machilipatnam, Andhra Pradesh",
+          "lat": 16.1875,
+          "lng": 81.1389,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Narasaraopet, Andhra Pradesh",
+          "lat": 16.2349,
+          "lng": 80.0493,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bapatla, Andhra Pradesh",
+          "lat": 15.9042,
+          "lng": 80.4674,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ongole, Andhra Pradesh",
+          "lat": 15.5036,
+          "lng": 80.0445,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Chittoor, Andhra Pradesh",
+          "lat": 13.2105,
+          "lng": 79.0956,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Rayachoti, Andhra Pradesh",
+          "lat": 14.0572,
+          "lng": 78.7506,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kadapa, Andhra Pradesh",
+          "lat": 14.48,
+          "lng": 78.8235,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nandyal, Andhra Pradesh",
+          "lat": 15.478,
+          "lng": 78.4836,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kurnool, Andhra Pradesh",
+          "lat": 15.8289,
+          "lng": 78.036,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Anantapur, Andhra Pradesh",
+          "lat": 14.6778,
+          "lng": 77.6081,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Puttaparthi, Andhra Pradesh",
+          "lat": 14.1652,
+          "lng": 77.8117,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Parvathipuram, Andhra Pradesh",
+          "lat": 18.7839,
+          "lng": 83.4257,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Gudivada, Andhra Pradesh",
+          "lat": 16.4355,
+          "lng": 80.9955,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Tenali, Andhra Pradesh",
+          "lat": 16.239,
+          "lng": 80.645,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Chilakaluripet, Andhra Pradesh",
+          "lat": 16.0899,
+          "lng": 80.1671,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Proddatur, Andhra Pradesh",
+          "lat": 14.7502,
+          "lng": 78.5481,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Hindupur, Andhra Pradesh",
+          "lat": 13.8281,
+          "lng": 77.4914,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Adoni, Andhra Pradesh",
+          "lat": 15.6279,
+          "lng": 77.275,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Madanapalle, Andhra Pradesh",
+          "lat": 13.5503,
+          "lng": 78.5029,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Dharmavaram, Andhra Pradesh",
+          "lat": 14.4144,
+          "lng": 77.7203,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Guntakal, Andhra Pradesh",
+          "lat": 15.1711,
+          "lng": 77.3624,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Tadipatri, Andhra Pradesh",
+          "lat": 14.911,
+          "lng": 78.011,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Srikalahasti, Andhra Pradesh",
+          "lat": 13.7551,
+          "lng": 79.7014,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kavali, Andhra Pradesh",
+          "lat": 14.9163,
+          "lng": 79.9945,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Gudur, Andhra Pradesh",
+          "lat": 14.1509,
+          "lng": 79.8521,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Chirala, Andhra Pradesh",
+          "lat": 15.8239,
+          "lng": 80.3522,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Markapur, Andhra Pradesh",
+          "lat": 15.7353,
+          "lng": 79.2685,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kandukur, Andhra Pradesh",
+          "lat": 15.2154,
+          "lng": 79.9039,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Tadepalligudem, Andhra Pradesh",
+          "lat": 16.8147,
+          "lng": 81.5272,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Tanuku, Andhra Pradesh",
+          "lat": 16.7544,
+          "lng": 81.6814,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Palakollu, Andhra Pradesh",
+          "lat": 16.5167,
+          "lng": 81.73,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Narasapuram (Narsapur), Andhra Pradesh",
+          "lat": 16.4342,
+          "lng": 81.6984,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nuzvid, Andhra Pradesh",
+          "lat": 16.7885,
+          "lng": 80.8459,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jaggayyapeta, Andhra Pradesh",
+          "lat": 16.8938,
+          "lng": 80.0981,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nandigama, Andhra Pradesh",
+          "lat": 16.7717,
+          "lng": 80.286,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mangalagiri, Andhra Pradesh",
+          "lat": 16.4308,
+          "lng": 80.5682,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ponnur, Andhra Pradesh",
+          "lat": 16.0711,
+          "lng": 80.5494,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Repalle, Andhra Pradesh",
+          "lat": 16.0184,
+          "lng": 80.8296,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Sattenapalle, Andhra Pradesh",
+          "lat": 16.3938,
+          "lng": 80.1522,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Vinukonda, Andhra Pradesh",
+          "lat": 16.0531,
+          "lng": 79.7396,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Macherla, Andhra Pradesh",
+          "lat": 16.4764,
+          "lng": 79.4353,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Piduguralla, Andhra Pradesh",
+          "lat": 16.4793,
+          "lng": 79.8863,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Samalkot, Andhra Pradesh",
+          "lat": 17.0568,
+          "lng": 82.1764,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Peddapuram, Andhra Pradesh",
+          "lat": 17.077,
+          "lng": 82.1384,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Tuni, Andhra Pradesh",
+          "lat": 17.359,
+          "lng": 82.5461,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Pithapuram, Andhra Pradesh",
+          "lat": 17.1168,
+          "lng": 82.2528,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ramachandrapuram, Andhra Pradesh",
+          "lat": 16.8364,
+          "lng": 82.0287,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mandapeta, Andhra Pradesh",
+          "lat": 16.8625,
+          "lng": 81.9292,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kovvur, Andhra Pradesh",
+          "lat": 17.0162,
+          "lng": 81.7293,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nidadavole, Andhra Pradesh",
+          "lat": 16.9057,
+          "lng": 81.6722,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jangareddygudem, Andhra Pradesh",
+          "lat": 17.1223,
+          "lng": 81.2923,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bobbili, Andhra Pradesh",
+          "lat": 18.5737,
+          "lng": 83.3593,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Palasa, Andhra Pradesh",
+          "lat": 18.7726,
+          "lng": 84.4101,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ichchapuram, Andhra Pradesh",
+          "lat": 19.1139,
+          "lng": 84.6872,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Amadalavalasa, Andhra Pradesh",
+          "lat": 18.4106,
+          "lng": 83.9024,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Narsipatnam, Andhra Pradesh",
+          "lat": 17.6671,
+          "lng": 82.6124,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Yelamanchili, Andhra Pradesh",
+          "lat": 17.5491,
+          "lng": 82.8575,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bheemunipatnam, Andhra Pradesh",
+          "lat": 17.8902,
+          "lng": 83.452,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Salur, Andhra Pradesh",
+          "lat": 18.5172,
+          "lng": 83.2055,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Rayadurg, Andhra Pradesh",
+          "lat": 14.6997,
+          "lng": 76.8524,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kadiri, Andhra Pradesh",
+          "lat": 14.1117,
+          "lng": 78.1598,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kalyandurg, Andhra Pradesh",
+          "lat": 14.5452,
+          "lng": 77.1055,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Pulivendula, Andhra Pradesh",
+          "lat": 14.4214,
+          "lng": 78.225,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jammalamadugu, Andhra Pradesh",
+          "lat": 14.8468,
+          "lng": 78.3831,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Badvel, Andhra Pradesh",
+          "lat": 14.7451,
+          "lng": 79.0629,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mydukur, Andhra Pradesh",
+          "lat": 14.7,
+          "lng": 78.78,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Yemmiganur, Andhra Pradesh",
+          "lat": 15.772,
+          "lng": 77.4835,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nandikotkur, Andhra Pradesh",
+          "lat": 15.8567,
+          "lng": 78.2657,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Allagadda, Andhra Pradesh",
+          "lat": 15.1336,
+          "lng": 78.4975,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Punganur, Andhra Pradesh",
+          "lat": 13.3667,
+          "lng": 78.5719,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Palamaner, Andhra Pradesh",
+          "lat": 13.2,
+          "lng": 78.7472,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kuppam, Andhra Pradesh",
+          "lat": 12.7493,
+          "lng": 78.3419,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nagari, Andhra Pradesh",
+          "lat": 13.3214,
+          "lng": 79.5856,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Puttur, Andhra Pradesh",
+          "lat": 13.4419,
+          "lng": 79.5531,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Sullurpeta, Andhra Pradesh",
+          "lat": 13.7022,
+          "lng": 80.0181,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Naidupeta, Andhra Pradesh",
+          "lat": 13.91,
+          "lng": 79.8941,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Venkatagiri, Andhra Pradesh",
+          "lat": 13.9601,
+          "lng": 79.5803,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Addanki, Andhra Pradesh",
+          "lat": 15.8106,
+          "lng": 79.9734,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Giddalur, Andhra Pradesh",
+          "lat": 15.3744,
+          "lng": 78.9261,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kanigiri, Andhra Pradesh",
+          "lat": 15.4055,
+          "lng": 79.5069,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Avanigadda, Andhra Pradesh",
+          "lat": 16.0215,
+          "lng": 80.9181,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Pedana, Andhra Pradesh",
+          "lat": 16.2558,
+          "lng": 81.1438,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Vuyyuru, Andhra Pradesh",
+          "lat": 16.3631,
+          "lng": 80.8441,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kaikaluru, Andhra Pradesh",
+          "lat": 16.5515,
+          "lng": 81.214,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Rajam, Andhra Pradesh",
+          "lat": 18.4479,
+          "lng": 83.6617,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Srisailam, Andhra Pradesh",
+          "lat": 16.0733,
+          "lng": 78.8687,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Annavaram, Andhra Pradesh",
+          "lat": 17.282,
+          "lng": 82.4055,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mantralayam, Andhra Pradesh",
+          "lat": 15.9417,
+          "lng": 77.4281,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Tadepalle, Andhra Pradesh",
+          "lat": 16.4833,
+          "lng": 80.6,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Atmakur (Nellore), Andhra Pradesh",
+          "lat": 14.6167,
+          "lng": 79.6246,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Atmakur (Kurnool), Andhra Pradesh",
+          "lat": 15.8811,
+          "lng": 78.587,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Adilabad, Telangana",
+          "lat": 19.672,
+          "lng": 78.5359,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Asifabad, Telangana",
+          "lat": 19.3585,
+          "lng": 79.2841,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mancherial, Telangana",
+          "lat": 18.8707,
+          "lng": 79.4286,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nirmal, Telangana",
+          "lat": 19.0968,
+          "lng": 78.3441,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nizamabad, Telangana",
+          "lat": 18.6715,
+          "lng": 78.0988,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kamareddy, Telangana",
+          "lat": 18.3257,
+          "lng": 78.3342,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jagtial, Telangana",
+          "lat": 18.7947,
+          "lng": 78.9166,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Peddapalli, Telangana",
+          "lat": 18.6136,
+          "lng": 79.3744,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Karimnagar, Telangana",
+          "lat": 18.4392,
+          "lng": 79.1286,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Sircilla, Telangana",
+          "lat": 18.3866,
+          "lng": 78.8022,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Siddipet, Telangana",
+          "lat": 18.1048,
+          "lng": 78.8486,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Medak, Telangana",
+          "lat": 18.0453,
+          "lng": 78.2608,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Sangareddy, Telangana",
+          "lat": 17.6248,
+          "lng": 78.0867,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Vikarabad, Telangana",
+          "lat": 17.3381,
+          "lng": 77.9044,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Medchal, Telangana",
+          "lat": 17.6297,
+          "lng": 78.4814,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mahabubnagar, Telangana",
+          "lat": 16.7438,
+          "lng": 77.986,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Narayanpet, Telangana",
+          "lat": 16.748,
+          "lng": 77.4954,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Wanaparthy, Telangana",
+          "lat": 16.3674,
+          "lng": 78.0689,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nagarkurnool, Telangana",
+          "lat": 16.4821,
+          "lng": 78.3247,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Gadwal, Telangana",
+          "lat": 16.235,
+          "lng": 77.7956,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Nalgonda, Telangana",
+          "lat": 17.0544,
+          "lng": 79.2671,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Suryapet, Telangana",
+          "lat": 17.1415,
+          "lng": 79.6236,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bhongir (Bhuvanagiri), Telangana",
+          "lat": 17.5154,
+          "lng": 78.8856,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jangaon, Telangana",
+          "lat": 17.726,
+          "lng": 79.1524,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Hanamkonda, Telangana",
+          "lat": 18.0061,
+          "lng": 79.5481,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Warangal, Telangana",
+          "lat": 17.9689,
+          "lng": 79.5941,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mahabubabad, Telangana",
+          "lat": 17.6004,
+          "lng": 80.0054,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bhupalpally, Telangana",
+          "lat": 18.4287,
+          "lng": 79.8638,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mulugu, Telangana",
+          "lat": 18.191,
+          "lng": 79.943,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kothagudem, Telangana",
+          "lat": 17.5511,
+          "lng": 80.6178,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Khammam, Telangana",
+          "lat": 17.2477,
+          "lng": 80.1437,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Ramagundam, Telangana",
+          "lat": 18.755,
+          "lng": 79.474,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Secunderabad, Telangana",
+          "lat": 17.5043,
+          "lng": 78.5426,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bodhan, Telangana",
+          "lat": 18.6621,
+          "lng": 77.8858,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Armoor, Telangana",
+          "lat": 18.79,
+          "lng": 78.29,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Koratla, Telangana",
+          "lat": 18.8215,
+          "lng": 78.7119,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Metpally, Telangana",
+          "lat": 18.8472,
+          "lng": 78.6256,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bellampalli, Telangana",
+          "lat": 19.0558,
+          "lng": 79.493,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Mandamarri, Telangana",
+          "lat": 18.9651,
+          "lng": 79.4748,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kagaznagar, Telangana",
+          "lat": 19.3316,
+          "lng": 79.466,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bhainsa, Telangana",
+          "lat": 19.1,
+          "lng": 77.9667,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Miryalaguda, Telangana",
+          "lat": 16.8722,
+          "lng": 79.5625,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kodad, Telangana",
+          "lat": 16.9978,
+          "lng": 79.9653,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Huzurnagar, Telangana",
+          "lat": 16.9003,
+          "lng": 79.8745,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Devarakonda, Telangana",
+          "lat": 16.6932,
+          "lng": 78.9147,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Palwancha, Telangana",
+          "lat": 17.5815,
+          "lng": 80.6765,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Yellandu, Telangana",
+          "lat": 17.5906,
+          "lng": 80.3215,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Sathupalli, Telangana",
+          "lat": 17.2497,
+          "lng": 80.869,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Madhira, Telangana",
+          "lat": 16.9233,
+          "lng": 80.3631,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Bhadrachalam, Telangana",
+          "lat": 17.6685,
+          "lng": 80.8889,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Zaheerabad, Telangana",
+          "lat": 17.6814,
+          "lng": 77.6074,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Sadasivpet, Telangana",
+          "lat": 17.6193,
+          "lng": 77.9526,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Tandur, Telangana",
+          "lat": 17.2485,
+          "lng": 77.577,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Shadnagar, Telangana",
+          "lat": 17.0712,
+          "lng": 78.2049,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Narsampet, Telangana",
+          "lat": 17.9279,
+          "lng": 79.8923,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Husnabad, Telangana",
+          "lat": 18.1272,
+          "lng": 79.2076,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Gajwel, Telangana",
+          "lat": 17.8482,
+          "lng": 78.6829,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Huzurabad, Telangana",
+          "lat": 18.202,
+          "lng": 79.3963,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Jammikunta, Telangana",
+          "lat": 18.2864,
+          "lng": 79.4761,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Vemulawada, Telangana",
+          "lat": 18.467,
+          "lng": 78.883,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Kalwakurthy, Telangana",
+          "lat": 16.664,
+          "lng": 78.4914,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Achampet, Telangana",
+          "lat": 16.3982,
+          "lng": 78.6376,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Yadagirigutta, Telangana",
+          "lat": 17.5889,
+          "lng": 78.9434,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Basar, Telangana",
+          "lat": 18.8817,
+          "lng": 77.9528,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Manthani, Telangana",
+          "lat": 18.6509,
+          "lng": 79.665,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
+        },
+        {
+          "name": "Banswada, Telangana",
+          "lat": 18.3773,
+          "lng": 77.8801,
+          "timezone": 5.5,
+          "iana_tz": "Asia/Kolkata"
         }
       ]
     },

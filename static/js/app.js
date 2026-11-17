@@ -338,16 +338,30 @@
   }
 
   function renderDasha() {
-    const d = S.horo.dasha;
+    const d = S.horo.dasha, bj = S.horo.chart.birth.jd_ut;
+    const bd = S.horo.chart.birth.date.split('-').reverse().join('-');      // dd-mm-yyyy
+    const BIRTH = T('Birth', 'జననం');
+    // state of a period relative to the birth moment
+    const st = (x) => x.end_jd <= bj ? 'prebirth' : (x.start_jd <= bj ? 'atbirth' : '');
+    const from = (x) => st(x) === 'atbirth'
+      ? `<b>${bd}</b> <span class="bmark">★ ${BIRTH}</span><br><small class="orig">${T('began', 'ప్రారంభం')} ${x.start}</small>` : x.start;
+    const tag = (x) => st(x) === 'prebirth' ? ` <small class="pbtag">${T('before birth', 'జననానికి ముందు')}</small>` : '';
     const cur = (d.current || []).map(x => `${pn(x.lord)} (${x.start} – ${x.end})`).join(' › ');
+    const bal = d.balance;
     const md = d.mahadashas.map(m => `
-      <details ${m.current ? 'open' : ''} class="${m.current ? 'cur' : ''}"><summary><b>${pn(m.lord)} ${T('Mahadasha', 'మహాదశ')}</b> ${m.start} – ${m.end} <small>(${m.years} ${T('yrs', 'సం')})</small></summary>
+      <details ${m.current ? 'open' : ''} class="${m.current ? 'cur' : ''} ${st(m)}"><summary><b>${pn(m.lord)} ${T('Mahadasha', 'మహాదశ')}</b>
+        ${st(m) === 'atbirth' ? `${bd} <span class="bmark">★ ${BIRTH}</span> <small class="orig">(${T('began', 'ప్రారంభం')} ${m.start})</small>` : m.start} – ${m.end}
+        <small>(${m.years} ${T('yrs', 'సం')})</small></summary>
       <table class="grid"><tr><th>${T('Antardasha', 'అంతర్దశ')}</th><th>${T('From', 'నుండి')}</th><th>${T('To', 'వరకు')}</th><th>${T('Pratyantar', 'ప్రత్యంతర')}</th></tr>
-      ${m.sub.map(a => `<tr class="${a.current ? 'cur' : ''}"><td>${pn(a.lord)}</td><td>${a.start}</td><td>${a.end}</td>
-        <td><details><summary>${T('show', 'చూపు')}</summary>${a.sub.map(p => `<div class="${p.current ? 'cur' : ''}">${pn(p.lord)}: ${p.start} – ${p.end}</div>`).join('')}</details></td></tr>`).join('')}
+      ${m.sub.map(a => `<tr class="${a.current ? 'cur' : ''} ${st(a)}"><td>${pn(a.lord)}${tag(a)}</td><td>${from(a)}</td><td>${a.end}</td>
+        <td><details><summary>${T('show', 'చూపు')}</summary>${a.sub.map(p => `<div class="${p.current ? 'cur' : ''} ${st(p)}">${pn(p.lord)}: ${st(p) === 'atbirth' ? `${bd} ★` : p.start} – ${p.end}${tag(p)}</div>`).join('')}</details></td></tr>`).join('')}
       </table></details>`).join('');
-    $('#tab-dasha').innerHTML = `<div class="card"><h3>${T('Current period', 'ప్రస్తుత దశ')}</h3><p class="big">${cur || '-'}</p></div><div class="card">${md}</div>`;
+    $('#tab-dasha').innerHTML = `<div class="card"><h3>${T('Current period', 'ప్రస్తుత దశ')}</h3><p class="big">${cur || '-'}</p>
+      <p>${T('Dasha balance at birth', 'జనన కాల దశా శేషం')}: <b>${pn(d.birth_lord)} ${bal.years}${T('y', 'సం')} ${bal.months}${T('m', 'నె')} ${bal.days}${T('d', 'రో')}</b></p>
+      <p class="note">★ = ${T('period running at birth (dates shown from the birth date)', 'జనన సమయంలో నడుస్తున్న దశ (జనన తేదీ నుండి చూపబడింది)')} · <span class="pbtag">${T('grey = before birth', 'బూడిద రంగు = జననానికి ముందు')}</span></p></div>
+      <div class="card">${md}</div>`;
   }
+
 
   function renderAshtaka() {
     const a = S.horo.ashtakavarga, lag = S.horo.chart.lagna.sign.index;

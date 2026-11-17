@@ -74,3 +74,10 @@ tr.must td:nth-child(2) { font-weight: 700; }
 .lvl { font-weight: 700; } .lvl.good { color: var(--good); } .lvl.medium { color: #9a6b00; } .lvl.bad { color: var(--bad); }
 .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; } .two h4 { margin: 0 0 6px; color: var(--b); }
 table.grid td small { color: var(--muted); }
+
+/* Dasha: periods before birth / at birth */
+tr.prebirth td, div.prebirth { color: #a3a1b5; background: #f4f3f8; }
+tr.atbirth td { background: #fff6dc; }
+.bmark { color: #b8860b; font-weight: 700; font-size: .8rem; white-space: nowrap; }
+.orig { color: var(--muted); }
+.pbtag { color: #a3a1b5; font-size: .75rem; font-style: italic; }

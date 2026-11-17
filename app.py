@@ -3,6 +3,7 @@
 # so a mobile app can call the same JSON endpoints.
 import json
 import os
+import unicodedata
 
 from flask import Flask, jsonify, render_template, request
 from timezonefinder import TimezoneFinder
@@ -17,8 +18,18 @@ app = Flask(__name__)
 SUBPATH = os.environ.get('FLASK_SUBPATH', '')
 tf = TimezoneFinder()
 
+def _alpha_key(name):
+    """Alphabetical sort key that ignores case and accents (Ísafjörður sorts with I)."""
+    return unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').decode().casefold()
+
+
 with open(os.path.join(os.path.dirname(__file__), 'locations.json'), encoding='utf-8') as f:
     location_data = json.load(f)
+# Always serve countries and cities alphabetically, whatever order they are in the file,
+# so new entries can be appended anywhere in locations.json (restart the app after editing it).
+location_data['countries'].sort(key=lambda c: _alpha_key(c['name']))
+for _c in location_data['countries']:
+    _c.get('cities', []).sort(key=lambda x: _alpha_key(x['name']))
 
 
 @app.context_processor
