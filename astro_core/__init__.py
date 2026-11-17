@@ -9,6 +9,7 @@ from .ashtakavarga import ashtakavarga  # noqa
 from .matching import match, kuja_dosha  # noqa
 from .yogas import detect_yogas  # noqa
 from .gochara import gochara, now_jd  # noqa
+from .marriage import kuja_dosha_full, full_match  # noqa
 from .predictions import predictions  # noqa
 
 
@@ -23,7 +24,7 @@ def full_horoscope(name, date, time, lat, lon, iana_tz, place='', lang='english'
         'dasha': dasha,
         'ashtakavarga': ashtakavarga(chart),
         'yogas': yogas,
-        'kuja_dosha': kuja_dosha(chart),
+        'kuja_dosha': kuja_dosha_full(chart),
         'gochara': gochara(chart, nj),
         'predictions': predictions(chart, dasha, yogas, lang),
     }

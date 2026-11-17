@@ -295,7 +295,7 @@
       [T('Ishta kaala', 'ఇష్ట కాలం'), p.ishta_kaala_ghatis || '-'],
       [T('Ayanamsa (Lahiri)', 'అయనాంశ (లాహిరి)'), c.ayanamsa.dms],
       [T('Dasha balance at birth', 'జనన కాల దశా శేషం'), `${pn(S.horo.dasha.birth_lord)} ${S.horo.dasha.balance.years}${T('y', 'సం')} ${S.horo.dasha.balance.months}${T('m', 'నె')} ${S.horo.dasha.balance.days}${T('d', 'రో')}`],
-      [T('Kuja dosha', 'కుజ దోషం'), kd.present ? T('Present', 'ఉంది') : T('Not present', 'లేదు') + (kd.exceptions.length ? ` (${T('cancelled', 'భంగం')})` : '')],
+      [T('Kuja dosha', 'కుజ దోషం'), { present: T('Present', 'ఉంది'), cancelled: T('Cancelled (exception applies)', 'దోష భంగం'), none: T('Not present', 'లేదు') }[kd.status]],
     ];
     $('#tab-jathakam').innerHTML = `
       <div class="charts">
@@ -390,26 +390,179 @@
   }
 
   function renderMatch() {
-    const m = S.match, r = m.result;
-    const order = ['varna', 'vashya', 'tara', 'yoni', 'graha_maitri', 'gana', 'bhakoot', 'nadi'];
-    const label = (k) => S.lang === 'telugu' ? r.kootas[k].name_telugu : k.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase());
-    const val = (v) => typeof v === 'string' && S.meta.planets[v] ? pn(v) : v;
-    const rows = order.map(k => { const x = r.kootas[k]; return `<tr class="${x.score === 0 ? 'weak' : ''}"><td>${label(k)}</td><td>${val(x.boy)}</td><td>${val(x.girl)}</td><td><b>${x.score}</b> / ${x.max}</td></tr>`; }).join('');
-    const info = (c) => { const mo = c.grahas[1]; return `${c.name || ''}: ${nm(mo.sign)}, ${nm(mo.nakshatra)} ${mo.nakshatra.pada}`; };
-    const pct = Math.round(r.total / 36 * 100);
-    $('#matchOut').innerHTML = `
-      <div class="card score"><div class="ring" style="--p:${pct}"><span>${r.total}<small>/36</small></span></div>
-        <div><h3>${r.verdict}</h3><p>${T('Boy', 'వరుడు')} – ${info(m.boy)}<br>${T('Girl', 'వధువు')} – ${info(m.girl)}</p></div></div>
-      <div class="card scroll"><table class="grid"><tr><th>${T('Koota', 'కూటమి')}</th><th>${T('Boy', 'వరుడు')}</th><th>${T('Girl', 'వధువు')}</th><th>${T('Points', 'గుణాలు')}</th></tr>${rows}
-        <tr><td><b>${T('Total', 'మొత్తం')}</b></td><td></td><td></td><td><b>${r.total} / 36</b></td></tr></table></div>
-      <div class="card"><table class="kv">
-        <tr><th>${T('Rajju', 'రజ్జు')}</th><td>${r.rajju.boy} / ${r.rajju.girl} ${r.rajju.dosha ? '⚠' : '✓'}</td></tr>
-        <tr><th>${T('Vedha', 'వేధ')}</th><td>${r.vedha ? '⚠' : '✓'}</td></tr>
-        <tr><th>${T('Kuja dosha (boy)', 'కుజ దోషం (వరుడు)')}</th><td>${r.kuja.boy.present ? T('Present', 'ఉంది') : T('No', 'లేదు')}</td></tr>
-        <tr><th>${T('Kuja dosha (girl)', 'కుజ దోషం (వధువు)')}</th><td>${r.kuja.girl.present ? T('Present', 'ఉంది') : T('No', 'లేదు')}</td></tr></table>
-        ${r.notes.map(n => `<p class="note">• ${n}</p>`).join('')}</div>
-      <div class="charts">${southChart(m.boy.vargas.D1.boxes, m.boy.vargas.D1.lagna_sign, T('Boy – Rasi', 'వరుడు – రాశి'), m.boy.name, m.boy.grahas)}
-        ${southChart(m.girl.vargas.D1.boxes, m.girl.vargas.D1.lagna_sign, T('Girl – Rasi', 'వధువు – రాశి'), m.girl.name, m.girl.grahas)}</div>`;
+    const m = S.match, R = m.result, L = S.meta.labels[S.lang];
+    const tt = (pair) => S.lang === 'telugu' ? pair[1] : pair[0];
+    const RES = { good: ['Good', 'అనుకూలం'], medium: ['Medium', 'మధ్యమం'], bad: ['Not matching', 'ప్రతికూలం'] };
+    const badge = (r) => `<span class="badge ${r}">${tt(RES[r])}</span>`;
+    const VERDICT = {
+      good: ['Good match', 'ఉత్తమ పొంతన'], average: ['Average — consult an astrologer', 'మధ్యమ పొంతన — జ్యోతిష్కుని సంప్రదించండి'],
+      weak: ['Weak match', 'బలహీన పొంతన'], not_recommended: ['Not recommended (Rajju / Vedha dosha)', 'సిఫార్సు చేయబడదు (రజ్జు / వేధ దోషం)'] };
+    const FLAGS = { rajju: ['Rajju dosha', 'రజ్జు దోషం'], vedha: ['Vedha dosha', 'వేధ దోషం'],
+      kuja_one_sided: ['Kuja dosha in only one chart', 'ఒక జాతకంలో మాత్రమే కుజ దోషం'], nadi: ['Nadi dosha', 'నాడీ దోషం'],
+      bhakoot: ['Bhakoot dosha', 'భకూట దోషం'], papa: ['Bride has more papam (Papasamyam)', 'వధువుకు పాపం ఎక్కువ (పాపసామ్యం)'] };
+    const GANA = [['Deva', 'దేవ'], ['Manushya', 'మనుష్య'], ['Rakshasa', 'రాక్షస']];
+    const YONI = [['Horse', 'అశ్వ'], ['Elephant', 'గజ'], ['Sheep', 'మేష'], ['Serpent', 'సర్ప'], ['Dog', 'శునక'], ['Cat', 'మార్జాల'],
+      ['Rat', 'మూషిక'], ['Cow', 'గో'], ['Buffalo', 'మహిష'], ['Tiger', 'వ్యాఘ్ర'], ['Deer', 'మృగ'], ['Monkey', 'వానర'], ['Mongoose', 'నకుల'], ['Lion', 'సింహ']];
+    const RAJJU = [['Pada', 'పాద'], ['Kati', 'కటి'], ['Nabhi', 'నాభి'], ['Kantha', 'కంఠ'], ['Siro', 'శిరో']];
+    const NADI = [['Adi', 'ఆది'], ['Madhya', 'మధ్య'], ['Antya', 'అంత్య']];
+    const KUJA = { none: ['No dosha', 'దోషం లేదు'], cancelled: ['Dosha cancelled', 'దోష భంగం'], present: ['Dosha present', 'దోషం ఉంది'] };
+    const KUJA_EXC = { own_exalted: ['Mars in own / exaltation sign', 'కుజుడు స్వక్షేత్ర / ఉచ్ఛ'],
+      sign_exception_lagna: ['Classical sign exception (from Lagna)', 'శాస్త్రీయ రాశి మినహాయింపు (లగ్నం నుండి)'],
+      sign_exception_moon: ['Classical sign exception (from Moon)', 'శాస్త్రీయ రాశి మినహాయింపు (చంద్రుని నుండి)'],
+      jupiter: ['Jupiter conjoins / aspects Mars', 'కుజునిపై గురు యుతి / దృష్టి'],
+      moon_conjunct: ['Moon with Mars (some traditions)', 'చంద్ర-కుజ యుతి (కొన్ని సంప్రదాయాలు)'] };
+    const CANCEL = { same_rasi_diff_star: ['Cancelled: same rasi, different nakshatra', 'భంగం: ఒకే రాశి, వేర్వేరు నక్షత్రాలు'],
+      same_star_diff_rasi: ['Cancelled: same nakshatra, different rasi', 'భంగం: ఒకే నక్షత్రం, వేర్వేరు రాశులు'],
+      same_star_diff_pada: ['Cancelled: same nakshatra, different pada', 'భంగం: ఒకే నక్షత్రం, వేర్వేరు పాదాలు'],
+      same_lord: ['Cancelled: same rasi lord', 'భంగం: రాశ్యాధిపతి ఒక్కరే'], lords_friends: ['Cancelled: rasi lords are friends', 'భంగం: రాశ్యాధిపతులు మిత్రులు'] };
+    const REF = { lagna: ['Lagna', 'లగ్నం'], moon: ['Moon', 'చంద్రుడు'], venus: ['Venus', 'శుక్రుడు'] };
+    const pl = (arr) => (arr && arr.length ? arr.map(pn).join(', ') : '—');
+    const dig = (d) => (d ? (L[d] || d) : '—');
+    const hs = (n) => `${n}${T('th house', 'వ స్థానం')}`;
+    const nak = (i) => S.meta.nakshatra[S.lang][i];
+    const B = R.individual.boy, G = R.individual.girl;
+    const BOY = T('Boy', 'వరుడు'), GIRL = T('Girl', 'వధువు');
+    const cmpHead = `<tr><th>${T('Parameter', 'అంశం')}</th><th>${BOY}</th><th>${GIRL}</th></tr>`;
+    const cmpRow = (label, fb, fg) => `<tr><td>${label}</td><td>${fb}</td><td>${fg}</td></tr>`;
+    const sec = (no, en, te, inner, note) => `<div class="card msec"><h3><span class="no">${no}</span>${T(en, te)}</h3>${inner}${note ? `<p class="note">${note}</p>` : ''}</div>`;
+
+    // ---- Summary
+    const s = R.summary;
+    const pct = Math.round(s.ashtakoota / 36 * 100);
+    const info = (c) => { const mo = c.grahas[1]; return `${esc(c.name || '')}: ${nm(mo.sign)}, ${nm(mo.nakshatra)} ${mo.nakshatra.pada}`; };
+    let html = `<div class="card score"><div class="ring" style="--p:${pct}"><span>${s.ashtakoota}<small>/36</small></span></div>
+      <div><h3 class="verdict ${s.verdict}">${tt(VERDICT[s.verdict])}</h3>
+      <p><b>${T('Dasha poruthams', 'దశ పొంతనలు')}:</b> ${s.porutham_score} / 10 &nbsp; <b>${T('Ashtakoota', 'అష్టకూట')}:</b> ${s.ashtakoota} / 36</p>
+      <p>${BOY} – ${info(m.boy)}<br>${GIRL} – ${info(m.girl)}</p>
+      ${s.flags.length ? `<p class="flags">${s.flags.map(f => `<span class="badge bad">${tt(FLAGS[f])}</span>`).join(' ')}</p>` : ''}</div></div>`;
+
+    // ---- 1-10 Dasha poruthams
+    const pdet = (r) => { const i = r.info; switch (r.key) {
+      case 'dina': case 'mahendra': case 'sthree_deergha': case 'rasi': return `${T('Count', 'లెక్క')} ${i.count}`;
+      case 'gana': return `${tt(GANA[i.boy])} / ${tt(GANA[i.girl])}`;
+      case 'yoni': return `${tt(YONI[i.boy])} / ${tt(YONI[i.girl])}`;
+      case 'rasyadhipathi': return `${pn(i.boy)} / ${pn(i.girl)}`;
+      case 'vasya': return `${rasi(i.boy)} / ${rasi(i.girl)}`;
+      case 'rajju': return `${tt(RAJJU[i.boy])} / ${tt(RAJJU[i.girl])}`;
+      case 'vedha': return `${nak(i.boy)} / ${nak(i.girl)}`; } return ''; };
+    const prow = R.poruthams.rows.map(r => `<tr class="${r.key === 'rajju' || r.key === 'vedha' ? 'must' : ''}"><td>${r.no}</td><td>${nm(r)}</td><td>${pdet(r)}</td><td>${badge(r.result)}</td></tr>`).join('');
+    html += sec(1, 'Dasha Poruthams (1–10)', 'దశ పొంతనలు (1–10)',
+      `<div class="scroll"><table class="grid"><tr><th>#</th><th>${T('Porutham', 'పొంతన')}</th><th>${BOY} / ${GIRL}</th><th>${T('Result', 'ఫలితం')}</th></tr>${prow}
+       <tr><td></td><td><b>${T('Total', 'మొత్తం')}</b></td><td></td><td><b>${R.poruthams.score} / 10</b></td></tr></table></div>`,
+      T('Counts are from the girl\'s nakshatra / rasi to the boy\'s. Rajju and Vedha are mandatory.', 'లెక్కలు వధువు నక్షత్రం / రాశి నుండి వరుని వరకు. రజ్జు, వేధ తప్పనిసరి.'));
+
+    // ---- Ashtakoota
+    const ak = R.ashtakoota, order = ['varna', 'vashya', 'tara', 'yoni', 'graha_maitri', 'gana', 'bhakoot', 'nadi'];
+    const klabel = (k) => S.lang === 'telugu' ? ak.kootas[k].name_telugu : k.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const EN2 = { Brahmin: 'బ్రాహ్మణ', Kshatriya: 'క్షత్రియ', Vaishya: 'వైశ్య', Shudra: 'శూద్ర', Chatushpada: 'చతుష్పాద',
+      Manava: 'మానవ', Jalachara: 'జలచర', Vanachara: 'వనచర', Keeta: 'కీట' };
+    [GANA, YONI, NADI].forEach(list => list.forEach(([en, te]) => { EN2[en] = te; }));
+    const kval = (v) => typeof v === 'string' && S.meta.planets[v] ? pn(v) : (S.lang === 'telugu' && EN2[v] ? EN2[v] : v);
+    const krows = order.map(k => { const x = ak.kootas[k]; return `<tr class="${x.score === 0 ? 'weak' : ''}"><td>${klabel(k)}</td><td>${kval(x.boy)}</td><td>${kval(x.girl)}</td><td><b>${x.score}</b> / ${x.max}</td></tr>`; }).join('');
+    html += sec(2, 'Ashtakoota (36 Gunas)', 'అష్టకూట పొంతన (36 గుణాలు)',
+      `<div class="scroll"><table class="grid"><tr><th>${T('Koota', 'కూటమి')}</th><th>${BOY}</th><th>${GIRL}</th><th>${T('Points', 'గుణాలు')}</th></tr>${krows}
+       <tr><td><b>${T('Total', 'మొత్తం')}</b></td><td></td><td></td><td><b>${ak.total} / 36</b></td></tr></table></div>`,
+      T('18+ is the usual threshold; a score alone should not decide a marriage.', 'సాధారణంగా 18+ ఆమోదయోగ్యం; కేవలం స్కోరుతో నిర్ణయించకూడదు.'));
+
+    // ---- 11-13 Doshas
+    const D = R.doshas;
+    const kujaCell = (ind) => { const k = ind.kuja;
+      const from = Object.entries(k.from).map(([r, v]) => `${tt(REF[r])}: ${hs(v.house)}${v.dosha ? ' ⚠' : ''}`).join('<br>');
+      return `<b>${tt(KUJA[k.status])}</b><br><small>${from}${k.status !== 'none' && k.exceptions.length ? '<br>' + k.exceptions.map(e => tt(KUJA_EXC[e])).join('<br>') : ''}</small>`; };
+    html += sec(3, 'Doshas — Kuja, Nadi, Bhakoot (11–13)', 'దోషాలు — కుజ, నాడీ, భకూట (11–13)',
+      `<div class="scroll"><table class="grid"><tr><th>${T('Dosha', 'దోషం')}</th><th>${BOY}</th><th>${GIRL}</th><th>${T('Result', 'ఫలితం')}</th></tr>
+       <tr><td>11. ${T('Kuja dosha', 'కుజ దోషం')}</td><td>${kujaCell(B)}</td><td>${kujaCell(G)}</td><td>${badge(D.kuja.result)}${D.kuja.samyam ? `<br><small>${T('Both have it — samyam', 'ఇద్దరికీ ఉంది — సామ్యం')}</small>` : ''}</td></tr>
+       <tr><td>12. ${T('Nadi dosha', 'నాడీ దోషం')}</td><td>${tt(NADI[D.nadi.boy])}</td><td>${tt(NADI[D.nadi.girl])}</td><td>${badge(D.nadi.result)}${D.nadi.cancel ? `<br><small>${tt(CANCEL[D.nadi.cancel])}</small>` : ''}</td></tr>
+       <tr><td>13. ${T('Bhakoot dosha', 'భకూట దోషం')}</td><td colspan="2">${T('Rasi count', 'రాశి లెక్క')} ${D.bhakoot.count} (${rasi(m.girl.grahas[1].sign.index)} → ${rasi(m.boy.grahas[1].sign.index)})</td><td>${badge(D.bhakoot.result)}${D.bhakoot.cancel ? `<br><small>${tt(CANCEL[D.bhakoot.cancel])}</small>` : ''}</td></tr>
+       </table></div>`,
+      T('Kuja dosha: Mars in 1, 2, 4, 7, 8, 12 from Lagna or Moon (Venus shown for reference). Matching is fine when both or neither have it.',
+        'కుజ దోషం: లగ్నం లేదా చంద్రుని నుండి 1, 2, 4, 7, 8, 12 స్థానాల్లో కుజుడు (శుక్రుడు సూచన కోసం). ఇద్దరికీ ఉన్నా, ఇద్దరికీ లేకపోయినా పొంతన సరిపోతుంది.'));
+
+    // ---- 14 Papasamyam
+    const P = R.papasamyam;
+    const papaList = (x) => x.items.length ? x.items.map(i => `${pn(i.planet)} – ${tt(REF[i.from])} ${hs(i.house)} (${i.points})`).join('<br>') : '—';
+    html += sec(4, 'Papasamyam (14)', 'పాపసామ్యం (14)',
+      `<div class="scroll"><table class="grid">${cmpHead}
+       ${cmpRow(T('Papa points', 'పాప బిందువులు'), `<b>${P.boy.total}</b>`, `<b>${P.girl.total}</b>`)}
+       ${cmpRow(T('Details', 'వివరాలు'), `<small>${papaList(P.boy)}</small>`, `<small>${papaList(P.girl)}</small>`)}
+       <tr><td>${T('Result', 'ఫలితం')}</td><td colspan="2">${badge(P.result)}</td></tr></table></div>`,
+      T('Malefics (Mars, Saturn, Rahu, Ketu, Sun ½) in 1, 2, 4, 7, 8, 12 from Lagna (×1), Moon (×½), Venus (×¼). Boy\'s total should be equal or higher.',
+        'పాప గ్రహాలు (కుజ, శని, రాహు, కేతు, రవి ½) లగ్నం (×1), చంద్ర (×½), శుక్ర (×¼) నుండి 1, 2, 4, 7, 8, 12 లో. వరుని పాపం సమానంగా లేదా ఎక్కువగా ఉండాలి.'));
+
+    // ---- 15-16 7th house & lord
+    const h7 = (x) => x.seventh;
+    const lordCell = (h) => `${pn(h.lord)} – ${hs(h.lord_house)}, ${rasi(h.lord_sign)}<br><small>${dig(h.lord_dignity)}${h.lord_combust ? ', ' + T('combust', 'అస్తంగతం') : ''}${h.lord_retro ? ', ' + T('retro', 'వక్రం') : ''}</small>`;
+    html += sec(5, '7th House & 7th Lord (15–16)', 'సప్తమ స్థానం, సప్తమాధిపతి (15–16)',
+      `<div class="scroll"><table class="grid">${cmpHead}
+       ${cmpRow(T('7th house sign', 'సప్తమ రాశి'), rasi(h7(B).sign), rasi(h7(G).sign))}
+       ${cmpRow(T('Planets in 7th', 'సప్తమంలో గ్రహాలు'), pl(h7(B).occupants), pl(h7(G).occupants))}
+       ${cmpRow(T('Aspects on 7th', 'సప్తమంపై దృష్టి'), pl(h7(B).aspects), pl(h7(G).aspects))}
+       ${cmpRow(T('7th lord', 'సప్తమాధిపతి'), lordCell(h7(B)), lordCell(h7(G)))}
+       ${cmpRow(T('Indication', 'సూచన'), badge(h7(B).result), badge(h7(G).result))}</table></div>`);
+
+    // ---- 17 Navamsa
+    const nv = (x) => x.navamsa;
+    const nvl = (n, k) => `${pn(n[k + '_lord'])} – ${hs(n[k + '_lord_house'])} <small>(${dig(n[k + '_lord_dignity'])})</small>`;
+    const nvk = (o) => `${rasi(o.sign)}, ${hs(o.house)} <small>(${dig(o.dignity)})</small>`;
+    html += sec(6, 'Navamsa — D9 (17)', 'నవాంశ — D9 (17)',
+      `<div class="scroll"><table class="grid">${cmpHead}
+       ${cmpRow(T('D9 Lagna', 'నవాంశ లగ్నం'), rasi(nv(B).lagna_sign), rasi(nv(G).lagna_sign))}
+       ${cmpRow(T('D9 Lagna lord', 'నవాంశ లగ్నాధిపతి'), nvl(nv(B), 'lagna'), nvl(nv(G), 'lagna'))}
+       ${cmpRow(T('D9 7th sign', 'నవాంశ సప్తమ రాశి'), rasi(nv(B).seventh_sign), rasi(nv(G).seventh_sign))}
+       ${cmpRow(T('D9 7th lord', 'నవాంశ సప్తమాధిపతి'), nvl(nv(B), 'seventh'), nvl(nv(G), 'seventh'))}
+       ${cmpRow(T('Planets in D9 7th', 'నవాంశ సప్తమంలో గ్రహాలు'), pl(nv(B).seventh_occupants), pl(nv(G).seventh_occupants))}
+       ${cmpRow(T('Venus in D9', 'నవాంశలో శుక్రుడు'), nvk(nv(B).venus), nvk(nv(G).venus))}
+       ${cmpRow(T('Jupiter in D9', 'నవాంశలో గురువు'), nvk(nv(B).jupiter), nvk(nv(G).jupiter))}
+       ${cmpRow(T('Vargottama', 'వర్గోత్తమ'), pl(nv(B).vargottama), pl(nv(G).vargottama))}</table></div>`);
+
+    // ---- 18 Venus & Jupiter
+    const kc = (x, p) => { const k = x.karakas[p];
+      return `${x.primary_karaka === p ? '★ ' : ''}${rasi(k.sign)}, ${hs(k.house)}<br><small>${dig(k.dignity)}${k.combust ? ', ' + T('combust', 'అస్తంగతం') : ''}${k.retro ? ', ' + T('retro', 'వక్రం') : ''} · D9: ${dig(k.d9_dignity)}</small>`; };
+    html += sec(7, 'Venus & Jupiter — marriage significators (18)', 'శుక్ర, గురు — వివాహ కారకులు (18)',
+      `<div class="scroll"><table class="grid">${cmpHead}
+       ${cmpRow(pn('venus'), kc(B, 'venus'), kc(G, 'venus'))}${cmpRow(pn('jupiter'), kc(B, 'jupiter'), kc(G, 'jupiter'))}</table></div>`,
+      T('★ = primary significator: Venus for the boy, Jupiter for the girl.', '★ = ముఖ్య కారకుడు: వరునికి శుక్రుడు, వధువుకు గురువు.'));
+
+    // ---- 19 Dasha-Bhukti
+    const dcol = (x) => { const d = x.dasha;
+      const cur = (d.current || []).slice(0, 2).map(c => pn(c.lord)).join(' › ') || '—';
+      const rows = d.periods.map(p => `<tr class="${p.current ? 'cur' : ''}"><td>${pn(p.md)} › ${pn(p.ad)}</td><td>${p.start} – ${p.end}</td><td>${p.strong ? '✓✓' : p.supportive ? '✓' : ''}</td></tr>`).join('');
+      return `<p><b>${T('Now', 'ప్రస్తుతం')}:</b> ${cur}</p><p class="note">${T('Marriage-related lords', 'వివాహ సంబంధ గ్రహాలు')}: ${pl(d.supportive_lords)}</p>
+        <table class="grid"><tr><th>${T('Dasha › Bhukti', 'దశ › భుక్తి')}</th><th>${T('Period', 'కాలం')}</th><th></th></tr>${rows}</table>`; };
+    html += sec(8, 'Dasha-Bhukti — next 7 years (19)', 'దశా భుక్తి — రాబోయే 7 సంవత్సరాలు (19)',
+      `<div class="two"><div><h4>${BOY}</h4>${dcol(B)}</div><div><h4>${GIRL}</h4>${dcol(G)}</div></div>`,
+      T('✓ = Dasha or Bhukti lord is linked to marriage (7th lord, planet in 7th, D9 7th lord, Venus, or the karaka). ✓✓ = both.',
+        '✓ = దశ లేదా భుక్తి నాథుడు వివాహానికి సంబంధించినవాడు (సప్తమాధిపతి, సప్తమ గ్రహం, నవాంశ సప్తమాధిపతి, శుక్రుడు లేదా కారకుడు). ✓✓ = రెండూ.'));
+
+    // ---- 20 Houses 2/4/8/12
+    const HN = { 2: ['2nd — family', '2వ — కుటుంబం'], 4: ['4th — domestic happiness', '4వ — గృహ సుఖం'],
+      8: ['8th — longevity of marriage', '8వ — మాంగల్య బలం'], 12: ['12th — intimacy, private life', '12వ — శయ్యా సుఖం'] };
+    const hcell = (h) => `${rasi(h.sign)} · ${T('lord', 'అధిపతి')} ${pn(h.lord)} ${hs(h.lord_house)} <small>(${dig(h.lord_dignity)})</small><br><small>${T('Planets', 'గ్రహాలు')}: ${pl(h.occupants)}</small> ${badge(h.result)}`;
+    html += sec(9, 'Houses 2, 4, 8, 12 (20)', '2, 4, 8, 12 స్థానాలు (20)',
+      `<div class="scroll"><table class="grid">${cmpHead}${[2, 4, 8, 12].map(h => cmpRow(tt(HN[h]), hcell(B.houses[h]), hcell(G.houses[h]))).join('')}</table></div>`);
+
+    // ---- 21 Santana
+    const sc = (x) => { const s5 = x.santana; return `${rasi(s5.sign)} · ${T('lord', 'అధిపతి')} ${pn(s5.lord)} ${hs(s5.lord_house)} <small>(${dig(s5.lord_dignity)})</small><br>
+      <small>${T('Planets in 5th', '5వ స్థానంలో')}: ${pl(s5.occupants)} · ${pn('jupiter')}: ${hs(s5.jupiter_house)} (${dig(s5.jupiter_dignity)})</small><br>${badge(s5.result)}`; };
+    html += sec(10, 'Santana — progeny indicators (21)', 'సంతాన సూచనలు (21)',
+      `<div class="scroll"><table class="grid">${cmpHead}${cmpRow(T('5th house & Jupiter', '5వ స్థానం, గురువు'), sc(B), sc(G))}</table></div>`);
+
+    // ---- 22 Graha bala
+    const gb = ['sun', 'moon', 'mars', 'mercury', 'jupiter', 'venus', 'saturn'].map(p =>
+      cmpRow(pn(p), `<span class="lvl ${B.graha_bala[p].level}">${B.graha_bala[p].score}</span>`, `<span class="lvl ${G.graha_bala[p].level}">${G.graha_bala[p].score}</span>`)).join('');
+    html += sec(11, 'Graha Bala — planetary strength (22)', 'గ్రహ బలం (22)',
+      `<div class="scroll"><table class="grid">${cmpHead}${gb}</table></div>`,
+      T('Simplified 0–10 strength from dignity (Rasi + Navamsa), house, combustion and retrogression. This is not full Shadbala.',
+        'రాశి + నవాంశ స్థితి, స్థానం, అస్తంగత్వం, వక్రం ఆధారంగా 0–10 సరళ బలం. ఇది పూర్తి షడ్బలం కాదు.'));
+
+    // ---- Charts
+    html += `<div class="charts">${southChart(m.boy.vargas.D1.boxes, m.boy.vargas.D1.lagna_sign, T('Boy – Rasi', 'వరుడు – రాశి'), m.boy.name, m.boy.grahas)}
+        ${southChart(m.boy.vargas.D9.boxes, m.boy.vargas.D9.lagna_sign, T('Boy – Navamsa', 'వరుడు – నవాంశ'), m.boy.name, m.boy.grahas)}</div>
+      <div class="charts">${southChart(m.girl.vargas.D1.boxes, m.girl.vargas.D1.lagna_sign, T('Girl – Rasi', 'వధువు – రాశి'), m.girl.name, m.girl.grahas)}
+        ${southChart(m.girl.vargas.D9.boxes, m.girl.vargas.D9.lagna_sign, T('Girl – Navamsa', 'వధువు – నవాంశ'), m.girl.name, m.girl.grahas)}</div>
+      <p class="note card">${T('These are traditional calculations, not proven predictors of marital success. Communication, values and mutual respect matter as much. Final judgement should come from an astrologer reviewing both full horoscopes.',
+        'ఇవి సాంప్రదాయిక లెక్కలు మాత్రమే; వివాహ విజయాన్ని నిర్ధారించవు. పరస్పర గౌరవం, విలువలు, సంభాషణ కూడా అంతే ముఖ్యం. రెండు పూర్తి జాతకాలను జ్యోతిష్కులు పరిశీలించి తుది నిర్ణయం చెప్పాలి.')}</p>`;
+    $('#matchOut').innerHTML = html;
   }
 
   boot();

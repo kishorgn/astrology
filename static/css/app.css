@@ -62,3 +62,15 @@ td.good, td.weak { font-weight: 700; } tr.sav td { background: #faf7ff; }
 .ring small { font-size: .8rem; color: var(--muted); }
 footer { color: rgba(255,255,255,.8); text-align: center; padding: 20px 0; font-size: .85rem; }
 @media (max-width: 560px) { .top h1 { font-size: 1.2rem; } }
+
+/* Match making report */
+.msec h3 { display: flex; align-items: center; gap: 8px; }
+.msec h3 .no { background: var(--b); color: #fff; border-radius: 50%; width: 26px; height: 26px; display: inline-grid; place-items: center; font-size: .85rem; flex: 0 0 auto; }
+.badge { display: inline-block; padding: 2px 9px; border-radius: 10px; font-size: .78rem; font-weight: 600; white-space: nowrap; }
+.badge.good { background: #e3f5ea; color: var(--good); } .badge.medium { background: #fdf3d8; color: #9a6b00; } .badge.bad { background: #fde7e5; color: var(--bad); }
+.verdict.good { color: var(--good); } .verdict.average { color: #9a6b00; } .verdict.weak, .verdict.not_recommended { color: var(--bad); }
+.flags .badge { margin: 2px 4px 2px 0; }
+tr.must td:nth-child(2) { font-weight: 700; }
+.lvl { font-weight: 700; } .lvl.good { color: var(--good); } .lvl.medium { color: #9a6b00; } .lvl.bad { color: var(--bad); }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; } .two h4 { margin: 0 0 6px; color: var(--b); }
+table.grid td small { color: var(--muted); }

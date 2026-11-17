@@ -156,7 +156,9 @@ def birth_panchanga(jd, local_dt, lat, lon, iana_tz):
     rise, sset = get_rise_set(local_dt.year, local_dt.month, local_dt.day, lat, lon, iana_tz_str=iana_tz)
     vara_date = local_dt.date()
     if rise and jd < rise:
+        # born after midnight but before sunrise: the Vedic day (and its sunrise/sunset) is the previous date
         vara_date -= datetime.timedelta(days=1)
+        rise, sset = get_rise_set(vara_date.year, vara_date.month, vara_date.day, lat, lon, iana_tz_str=iana_tz)
     vara_idx = (vara_date.weekday() + 1) % 7  # VARAM_NAMES starts on Sunday
 
     # Ishta kaala (ghatis from sunrise)

@@ -7,7 +7,8 @@ import os
 from flask import Flask, jsonify, render_template, request
 from timezonefinder import TimezoneFinder
 
-from astro_core import full_horoscope, build_chart, match
+from astro_core import full_horoscope, build_chart, vimshottari, now_jd
+from astro_core.marriage import full_match
 from astro_core.ephemeris import (EPHE_PATH, RASHI_NAMES, PLANET_NAMES, NAKSHATRA_NAMES, VARAM_NAMES)
 from astro_core.jyotish import PLANET_ABBR, VARGAS, HOUSE_THEMES, UI_LABELS
 from config import BRAND_NAME, DEVELOPER_CREDIT
@@ -93,7 +94,11 @@ def matchmaking():
         slim = lambda c: {'name': c['name'], 'lagna': c['lagna'], 'grahas': c['grahas'],
                           'vargas': {'D1': c['vargas']['D1'], 'D9': c['vargas']['D9']},
                           'panchanga': c['panchanga']}
-        return jsonify({'result': match(bc, gc), 'boy': slim(bc), 'girl': slim(gc)})
+        nj = now_jd()
+        moon = lambda c: next(x['longitude'] for x in c['grahas'] if x['key'] == 'moon')
+        bd = vimshottari(moon(bc), bc['birth']['jd_ut'], boy['iana_tz'], now_jd=nj, levels=2)
+        gd = vimshottari(moon(gc), gc['birth']['jd_ut'], girl['iana_tz'], now_jd=nj, levels=2)
+        return jsonify({'result': full_match(bc, gc, bd, gd, nj), 'boy': slim(bc), 'girl': slim(gc)})
     except (KeyError, ValueError) as e:
         return _err(e)
 
