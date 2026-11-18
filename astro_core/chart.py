@@ -266,6 +266,7 @@ def build_chart(name, date_str, time_str, lat, lon, iana_tz, place=''):
     for i in range(12):
         bhavas.append({'house': i + 1, 'madhya': round(madhya[i], 4), 'sandhi_start': round(sandhi[i], 4),
                        'madhya_dms': f"{RASHI_NAMES['english'][int(madhya[i] // 30)]} {decimal_to_dms_string(madhya[i])}",
+                       'madhya_sign': int(madhya[i] // 30), 'madhya_deg': decimal_to_dms_string(madhya[i]),
                        'planets': [g['key'] for g in grahas if g['bhava'] == i + 1]})
 
     return {

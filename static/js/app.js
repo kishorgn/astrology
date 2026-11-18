@@ -314,7 +314,7 @@
       <td>${nm(g.nakshatra)}</td><td>${g.nakshatra.pada}</td><td>${pn(g.nakshatra.lord)}</td>
       <td>${isL ? 1 : g.house_whole_sign}</td><td>${isL ? 1 : g.bhava}</td><td>${rasi(g.navamsa_sign)}</td>
       <td>${isL ? '' : [g.retrograde ? T('Retro', 'వక్రం') : '', g.combust ? T('Combust', 'అస్తంగతం') : '', g.dignity ? L[g.dignity] || '' : ''].filter(Boolean).join(', ')}</td></tr>`;
-    const bh = c.bhavas.map(b => `<tr><td>${b.house}</td><td>${b.madhya_dms}</td><td>${b.planets.map(pn).join(', ')}</td></tr>`).join('');
+    const bh = c.bhavas.map(b => `<tr><td>${b.house}</td><td>${rasi(b.madhya_sign)} ${b.madhya_deg}</td><td>${b.planets.map(pn).join(', ')}</td></tr>`).join('');
     const boxes = {}; for (let i = 0; i < 12; i++) boxes[i] = [];
     const lag = c.lagna.sign.index;
     c.grahas.forEach(g => boxes[(lag + g.bhava - 1) % 12].push(g.key)); boxes[lag].unshift('lagna');
@@ -377,9 +377,9 @@
 
   function renderPhalitam() {
     const sec = S.horo.predictions;
-    const yogas = S.horo.yogas.map(y => `<div class="yoga ${y.strength}"><b>${nm(y)}</b><p>${y.description}</p></div>`).join('');
+    const yogas = S.horo.yogas.map(y => `<div class="yoga ${y.strength}"><b>${nm(y)}</b><p>${S.lang === 'telugu' ? (y.description_telugu || y.description) : y.description}</p></div>`).join('');
     $('#tab-phalitam').innerHTML = `<div class="card"><h3>${T('Yogas', 'యోగాలు')}</h3>${yogas || '-'}</div>` +
-      sec.filter(s => s.title_english !== 'Yogas').map(s => `<div class="card"><h3>${S.lang === 'telugu' ? s.title_telugu : s.title_english}</h3>${s.items.map(i => `<p>${i}</p>`).join('')}</div>`).join('') +
+      sec.filter(s => s.key !== 'yogas').map(s => `<div class="card"><h3>${S.lang === 'telugu' ? s.title_telugu : s.title_english}</h3>${(s['items_' + S.lang] || s.items).map(i => `<p>${i}</p>`).join('')}</div>`).join('') +
       `<p class="note">${T('Rule-based draft interpretations — please consult an astrologer before acting on them.', 'నియమాల ఆధారిత ప్రాథమిక ఫలితాలు — నిర్ణయాలకు ముందు జ్యోతిష్కులను సంప్రదించండి.')}</p>`;
   }
 
