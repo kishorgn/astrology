@@ -2,7 +2,7 @@
 import datetime
 import swisseph as swe
 
-from .ephemeris import (ZoneInfo, get_ayanamsa, get_sideral_position, get_rise_set, get_elongation,
+from .ephemeris import (ensure_ephe, ZoneInfo, get_ayanamsa, get_sideral_position, get_rise_set, get_elongation,
                         find_elongation_boundary_jd, _get_tithi_name_with_paksha, get_karana_num,
                         decimal_to_dms_string, format_time_local, jd_to_datetime_utc,
                         NAKSHATRA_SPAN, PADA_SPAN, YOGA_SPAN, TITHI_SPAN,
@@ -107,6 +107,7 @@ def sign_names(idx):
 # ---------------------------------------------------------------- positions
 def planet_longitudes(jd):
     """{planet: (sidereal_lon, tropical_speed)} using the ephemeris_web_02 sphuta rule."""
+    ensure_ephe()
     out = {}
     for p in PLANETS:
         lon, speed, _, _ = get_sideral_position(jd, PLANET_MAP_SWE[p], is_ketu=(p == 'ketu'),
@@ -221,6 +222,7 @@ def samvatsara(jd, greg_year):
 
 # ---------------------------------------------------------------- main entry
 def build_chart(name, date_str, time_str, lat, lon, iana_tz, place=''):
+    ensure_ephe()
     jd, local_dt = local_to_jd_utc(date_str, time_str, iana_tz)
     positions = planet_longitudes(jd)
     asc, mc, madhya, sandhi = bhava_cusps(jd, lat, lon)

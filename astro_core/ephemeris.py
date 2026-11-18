@@ -24,6 +24,18 @@ def initialize_swisseph():
 
 EPHE_PATH = initialize_swisseph()
 
+# pyswisseph keeps the ephemeris path PER THREAD. Web servers run each request on a worker thread,
+# where the path set at import time is missing and Swiss Ephemeris silently falls back to the less
+# precise Moshier model (~1 arc-second Moon error). Every public entry point calls ensure_ephe().
+import threading as _threading
+_tls = _threading.local()
+
+
+def ensure_ephe():
+    if not getattr(_tls, 'ready', False):
+        swe.set_ephe_path(EPHE_PATH)
+        _tls.ready = True
+
 # --- Core Calculation Functions ---
 @lru_cache(maxsize=32)
 def get_ayanamsa(julian_day):

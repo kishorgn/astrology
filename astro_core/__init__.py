@@ -10,6 +10,7 @@ from .matching import match, kuja_dosha  # noqa
 from .yogas import detect_yogas  # noqa
 from .gochara import gochara, now_jd  # noqa
 from .marriage import kuja_dosha_full, full_match  # noqa
+from .remedies import chart_remedies, match_remedies  # noqa
 from .predictions import predictions  # noqa
 
 
@@ -19,12 +20,15 @@ def full_horoscope(name, date, time, lat, lon, iana_tz, place='', lang='english'
     nj = now_jd()
     dasha = vimshottari(moon_lon, chart['birth']['jd_ut'], iana_tz, now_jd=nj)
     yogas = detect_yogas(chart)
+    kuja = kuja_dosha_full(chart)
+    goch = gochara(chart, nj)
     return {
         'chart': chart,
         'dasha': dasha,
         'ashtakavarga': ashtakavarga(chart),
         'yogas': yogas,
-        'kuja_dosha': kuja_dosha_full(chart),
-        'gochara': gochara(chart, nj),
+        'kuja_dosha': kuja,
+        'gochara': goch,
+        'remedies': chart_remedies(chart, dasha, yogas, kuja, goch),
         'predictions': predictions(chart, dasha, yogas, lang),
     }

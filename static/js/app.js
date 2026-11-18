@@ -278,7 +278,7 @@
 
   // ------------------------------------------------------------ renderers
   function renderAll() {
-    renderJathakam(); renderGrahas(); renderVargas(); renderDasha(); renderAshtaka(); renderPhalitam(); renderGochara();
+    renderJathakam(); renderGrahas(); renderVargas(); renderDasha(); renderAshtaka(); renderPhalitam(); renderParihara(); renderGochara();
   }
 
   function renderJathakam() {
@@ -392,6 +392,33 @@
     const sh = g.shani ? `<div class="alert">${nm(g.shani)}</div>` : '';
     $('#tab-gochara').innerHTML = `${sh}<div class="charts">${southChart(boxes, moonSign, T('Gocharam (today)', 'గోచారం (ఈరోజు)'), T('highlight = Janma rasi', 'గుర్తు = జన్మ రాశి'), g.rows)}</div>
       <div class="card scroll"><table class="grid"><tr><th>${T('Planet', 'గ్రహం')}</th><th>${T('Position', 'స్థితి')}</th><th>${T('Nakshatra', 'నక్షత్రం')}</th><th>${T('From Moon', 'చంద్రుని నుండి')}</th><th>${T('From Lagna', 'లగ్నం నుండి')}</th><th></th></tr>${rows}</table></div>`;
+  }
+
+
+  // ------------------------------------------------------------ Remedies (పరిహారాలు)
+  function remedyCards(list, opts = {}) {
+    if (!list.length) return `<div class="card"><p>${T('No specific dosha requiring a remedy was found.', 'పరిహారం అవసరమైన ప్రత్యేక దోషం కనిపించలేదు.')}</p></div>`;
+    const L = (o, k) => o[k + (S.lang === 'telugu' ? '_telugu' : '_english')];
+    const PRI = { 1: ['Important', 'ముఖ్యం'], 2: ['Recommended', 'సూచనీయం'], 3: ['Optional', 'ఐచ్ఛికం'] };
+    return list.map(r => `<div class="card remedy p${r.priority}">
+      <h3>${L(r, 'title')} <span class="badge ${r.priority === 1 ? 'bad' : r.priority === 2 ? 'medium' : 'good'}">${S.lang === 'telugu' ? PRI[r.priority][1] : PRI[r.priority][0]}</span>
+        ${r.for ? `<span class="badge medium">${r.for === 'boy' ? T('for the boy', 'వరునికి') : T('for the girl', 'వధువుకు')}</span>` : ''}
+        ${r.transit ? `<span class="badge medium">${T('current transit', 'ప్రస్తుత గోచారం')}</span>` : ''}</h3>
+      <p class="why"><b>${T('Why', 'కారణం')}:</b> ${(S.lang === 'telugu' ? r.reasons_telugu : r.reasons_english).join('; ')}</p>
+      <p><b>${T('Puja', 'పరిహార పూజ')}:</b> ${L(r, 'puja')}</p>
+      ${r.japa.map(j => `<div class="japa"><b>${T('Japa', 'జపం')} — ${S.lang === 'telugu' ? j.name_telugu : j.name_english}:</b>
+          <span class="mantra">${j.beeja}</span>
+          <span>${j.count.toLocaleString('en-IN')} ${T('times', 'సార్లు')} · ${S.lang === 'telugu' ? j.day_telugu : j.day_english}</span></div>`).join('')}
+      ${r.mantra ? `<div class="japa"><b>${T('Mantra', 'మంత్రం')}:</b> <span class="mantra">${r.mantra}</span></div>` : ''}
+      ${L(r, 'dana') ? `<p><b>${T('Dana', 'దానం')}:</b> ${L(r, 'dana')}</p>` : ''}
+      ${L(r, 'temple') ? `<p><b>${T('Temple', 'క్షేత్రం')}:</b> ${L(r, 'temple')}</p>` : ''}
+    </div>`).join('') + `<p class="note card">${T('Japa counts and procedures differ between traditions and families. Please have a purohit or astrologer confirm the sankalpam, count and muhurtham before performing them. Remedies are traditional practices, not guarantees.',
+      'జప సంఖ్యలు, విధానాలు సంప్రదాయం మరియు కుటుంబ ఆచారాన్ని బట్టి మారుతాయి. చేసే ముందు సంకల్పం, సంఖ్య, ముహూర్తాన్ని పురోహితులు / జ్యోతిష్కులతో నిర్ధారించుకోండి. పరిహారాలు సాంప్రదాయిక ఆచరణలు మాత్రమే, హామీలు కావు.')}</p>`;
+  }
+
+  function renderParihara() {
+    $('#tab-parihara').innerHTML = `<div class="card"><h3>${T('Remedies — Parihara Pujas & Dosha Nivarana Japa', 'పరిహార పూజలు, దోష నివారణ జపాలు')}</h3>
+      <p class="note">${T('Suggested only for doshas actually found in this chart, most important first.', 'ఈ జాతకంలో నిజంగా ఉన్న దోషాలకు మాత్రమే, ముఖ్యమైనవి ముందుగా.')}</p></div>` + remedyCards(S.horo.remedies);
   }
 
   // ------------------------------------------------------------ Match making
@@ -568,6 +595,9 @@
       `<div class="scroll"><table class="grid">${cmpHead}${gb}</table></div>`,
       T('Simplified 0–10 strength from dignity (Rasi + Navamsa), house, combustion and retrogression. This is not full Shadbala.',
         'రాశి + నవాంశ స్థితి, స్థానం, అస్తంగత్వం, వక్రం ఆధారంగా 0–10 సరళ బలం. ఇది పూర్తి షడ్బలం కాదు.'));
+
+    // ---- 12 Remedies
+    html += `<div class="card msec"><h3><span class="no">12</span>${T('Remedies', 'పరిహారాలు')}</h3></div>` + remedyCards(R.remedies || []);
 
     // ---- Charts
     html += `<div class="charts">${southChart(m.boy.vargas.D1.boxes, m.boy.vargas.D1.lagna_sign, T('Boy – Rasi', 'వరుడు – రాశి'), m.boy.name, m.boy.grahas)}

@@ -81,3 +81,10 @@ tr.atbirth td { background: #fff6dc; }
 .bmark { color: #b8860b; font-weight: 700; font-size: .8rem; white-space: nowrap; }
 .orig { color: var(--muted); }
 .pbtag { color: #a3a1b5; font-size: .75rem; font-style: italic; }
+
+/* Remedies */
+.remedy { border-left: 5px solid var(--good); } .remedy.p1 { border-left-color: var(--bad); } .remedy.p2 { border-left-color: #d9a400; }
+.remedy h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.remedy .why { color: var(--muted); }
+.japa { background: #faf7ff; border-radius: 8px; padding: 8px 10px; margin: 6px 0; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.mantra { font-size: 1.05rem; color: var(--b); font-weight: 600; }
