@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ brand_name }}</title>
   <link rel="icon" type="image/svg+xml" href="{{ subpath }}/static/images/favicon.svg?v=2">
-  <link rel="stylesheet" href="{{ subpath }}/static/css/app.css?v=7">
+  <link rel="stylesheet" href="{{ subpath }}/static/css/app.css?v=8">
 </head>
 <body>
 <div class="wrap">
@@ -35,6 +35,9 @@
   </section>
 
   <div id="msg" class="msg" hidden></div>
+  <div class="actions" id="jActions" hidden>
+    <button type="button" id="pdfJ" class="pdfbtn" data-te="⬇ జాతకం PDF" data-en="⬇ Jathakam PDF">⬇ జాతకం PDF</button>
+  </div>
 
   <main>
     <section class="tab on" id="tab-jathakam"></section>
@@ -58,6 +61,9 @@
   {% if developer_credit %}<footer>{{ developer_credit }}</footer>{% endif %}
 </div>
 
+<!-- Filled only while exporting a PDF; print CSS shows this instead of the app -->
+<div id="printArea"></div>
+
 <template id="birthFields">
   <label><span data-te="పేరు" data-en="Name">పేరు</span><input name="name" required></label>
   <label><span data-te="తేదీ" data-en="Date">తేదీ</span><input type="date" name="date" required></label>
@@ -72,6 +78,6 @@
 </template>
 
 <script>window.SUBPATH = "{{ subpath }}";</script>
-<script src="{{ subpath }}/static/js/app.js?v=7"></script>
+<script src="{{ subpath }}/static/js/app.js?v=8"></script>
 </body>
 </html>

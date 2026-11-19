@@ -1,0 +1,6 @@
+1. Astrology application
+2. Enhanced Match making
+3. Locations enhanced
+4. Remidies added
+5. Language fine tuned
+6. PDF Export feature added

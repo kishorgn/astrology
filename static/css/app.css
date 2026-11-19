@@ -88,3 +88,45 @@ tr.atbirth td { background: #fff6dc; }
 .remedy .why { color: var(--muted); }
 .japa { background: #faf7ff; border-radius: 8px; padding: 8px 10px; margin: 6px 0; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
 .mantra { font-size: 1.05rem; color: var(--b); font-weight: 600; }
+
+/* PDF export buttons */
+.actions { display: flex; justify-content: flex-end; margin: 0 0 10px; }
+.pdfbtn { background: #fff; color: var(--b); border: 1px solid var(--b); padding: 8px 16px; border-radius: 8px; font-size: .95rem; font-weight: 600; cursor: pointer; }
+.pdfbtn:hover { background: #f3f1fb; }
+#printArea { display: none; }
+
+/* PDF export (browser "Save as PDF") — only while body.printing, so a normal Ctrl+P is unaffected */
+@media print {
+  @page { size: A4; margin: 12mm 11mm; }
+  body.printing { background: #fff !important; font-size: 10.5pt; }
+  body.printing .wrap { display: none !important; }
+  body.printing #printArea { display: block; }
+  #printArea, #printArea * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #printArea .phead { border-bottom: 2px solid var(--b); margin-bottom: 6mm; padding-bottom: 3mm; }
+  #printArea .phead h1 { color: var(--b); margin: 0 0 3mm; font-size: 18pt; }
+  #printArea .phead table.kv th { width: 35%; }
+  #printArea .psec { break-before: page; }
+  #printArea .phead + .psec { break-before: auto; }
+  #printArea h2 { color: var(--b); font-size: 14pt; margin: 0 0 4mm; border-left: 4px solid var(--b); padding-left: 3mm; }
+  #printArea .card { box-shadow: none; border: 1px solid var(--line); border-radius: 6px; padding: 3mm 4mm; margin-bottom: 4mm; background: #fff; break-inside: avoid; }
+  #printArea .card:has(> details), #printArea .psec > .card:has(table.grid tr:nth-child(14)) { break-inside: auto; }
+  #printArea tr, #printArea .yoga, #printArea .japa, #printArea figure, #printArea .rchart { break-inside: avoid; }
+  #printArea .scroll { overflow: visible; }
+  #printArea table { font-size: 8.5pt; } #printArea table.grid th, #printArea table.grid td { padding: 1.2mm 1.6mm; }
+  #printArea .charts { gap: 6mm; justify-content: center; break-inside: avoid; }
+  #printArea .charts > .card { flex: 1 1 80mm; }
+  #printArea .rchart { width: 82mm; }
+  #printArea .pgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm 5mm; }
+  #printArea .pgrid figure { margin: 0; } #printArea .pgrid .rchart { width: 100%; }
+  #printArea .pgrid figcaption { font-size: 7.5pt; color: var(--muted); margin-top: 1mm; line-height: 1.35; }
+  #printArea .pgrid figcaption b { color: var(--ink); }
+  #printArea details > summary { list-style: none; padding: 1.5mm 2mm; font-size: 10pt; }
+  #printArea details > summary::-webkit-details-marker { display: none; }
+  #printArea details { break-inside: avoid; margin-bottom: 3mm; }
+  #printArea details.cur { break-inside: auto; break-before: page; }
+  #printArea details.cur > table tr:first-child { break-after: avoid; }
+  #printArea .minis { display: none; }
+  #printArea .ring { width: 26mm; height: 26mm; } #printArea .ring span { width: 20mm; height: 20mm; font-size: 14pt; }
+  #printArea .two { grid-template-columns: 1fr 1fr; }
+  #printArea .note { font-size: 8pt; }
+}

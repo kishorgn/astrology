@@ -18,6 +18,7 @@
     $$('.lang button').forEach(b => b.onclick = () => setLang(b.dataset.lang));
     $$('#tabs button').forEach(b => b.onclick = () => showTab(b.dataset.tab));
     $('#matchBtn').onclick = runMatch;
+    $('#pdfJ').onclick = exportJathakamPdf;
     setLang('telugu');
   }
 
@@ -72,6 +73,7 @@
     $$('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
     $$('.tab').forEach(s => s.classList.toggle('on', s.id === 'tab-' + t));
     $('#birthCard').hidden = t === 'match';
+    S.tab = t; syncActions();
   }
 
   function msg(text, isErr) {
@@ -90,7 +92,7 @@
       msg(T('Calculating…', 'లెక్కిస్తున్నాం…'));
       S.horo = await post('/horoscope', { ...readForm($('#birthForm')), lang: S.lang });
       msg('');
-      renderAll();
+      renderAll(); syncActions();
     } catch (e) { msg(e.message, true); }
   }
 
@@ -425,7 +427,9 @@
   async function runMatch() {
     try {
       $('#matchOut').innerHTML = T('Calculating…', 'లెక్కిస్తున్నాం…');
-      S.match = await post('/match', { boy: readForm($('#boyForm')), girl: readForm($('#girlForm')) });
+      const req = { boy: readForm($('#boyForm')), girl: readForm($('#girlForm')) };
+      S.match = await post('/match', req);
+      S.matchReq = req;
       renderMatch();
     } catch (e) { $('#matchOut').innerHTML = `<div class="msg err">${e.message}</div>`; }
   }
@@ -606,7 +610,88 @@
         ${southChart(m.girl.vargas.D9.boxes, m.girl.vargas.D9.lagna_sign, T('Girl – Navamsa', 'వధువు – నవాంశ'), m.girl.name, m.girl.grahas)}</div>
       <p class="note card">${T('These are traditional calculations, not proven predictors of marital success. Communication, values and mutual respect matter as much. Final judgement should come from an astrologer reviewing both full horoscopes.',
         'ఇవి సాంప్రదాయిక లెక్కలు మాత్రమే; వివాహ విజయాన్ని నిర్ధారించవు. పరస్పర గౌరవం, విలువలు, సంభాషణ కూడా అంతే ముఖ్యం. రెండు పూర్తి జాతకాలను జ్యోతిష్కులు పరిశీలించి తుది నిర్ణయం చెప్పాలి.')}</p>`;
-    $('#matchOut').innerHTML = html;
+    $('#matchOut').innerHTML = `<div class="actions"><button type="button" id="pdfM" class="pdfbtn">${T('⬇ Match Making PDF', '⬇ పొంతన PDF')}</button></div>` + html;
+    $('#pdfM').onclick = exportMatchPdf;
+  }
+
+  // ------------------------------------------------------------ PDF export
+  // The browser's own print engine produces the PDF ("Save as PDF"), so Telugu conjuncts and the
+  // SVG charts come out exactly as on screen; server-side PDF libraries break Telugu shaping.
+  // Content is always in the language currently selected.
+  function syncActions() { $('#jActions').hidden = !S.horo || S.tab === 'match'; }
+
+  const fileSafe = (x) => String(x || '').trim().replace(/[\\/:*?"<>|]+/g, '').replace(/\s+/g, '_');
+  const today = () => new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
+  const tabName = (t) => { const b = $(`#tabs [data-tab=${t}]`); return S.lang === 'telugu' ? b.dataset.te : b.dataset.en; };
+  const kvTable = (rows) => `<table class="kv">${rows.map(r => `<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join('')}</table>`;
+
+  function printReport(fileTitle, heading, headHtml, sections) {
+    const pa = $('#printArea');
+    pa.innerHTML = `<header class="phead"><h1>${heading}</h1>${headHtml}
+        <p class="note">${T('Generated on', 'తయారు చేసిన తేదీ')}: ${today()} · ${T('Lahiri ayanamsa', 'లాహిరి అయనాంశ')}</p></header>` +
+      sections.map(s => `<section class="psec"><h2>${s[0]}</h2>${s[1]}</section>`).join('');
+    pa.querySelectorAll('button, .pills, .actions').forEach(e => e.remove());
+    pa.querySelectorAll('details').forEach(d => d.open = true);
+    const oldTitle = document.title;
+    document.title = fileTitle;                       // browsers use this as the PDF file name
+    document.body.classList.add('printing');
+    const done = () => {
+      document.body.classList.remove('printing'); document.title = oldTitle; pa.innerHTML = '';
+      window.removeEventListener('afterprint', done);
+    };
+    window.addEventListener('afterprint', done);
+    setTimeout(() => window.print(), 60);
+  }
+
+  function birthRows(b) {
+    return [[T('Name', 'పేరు'), esc(b.name || '-')], [T('Date of birth', 'జనన తేదీ'), b.date.split('-').reverse().join('-')],
+      [T('Time of birth', 'జనన సమయం'), b.time], [T('Place', 'ప్రదేశం'), esc(b.place || '-')],
+      [T('Latitude / Longitude', 'అక్షాంశం / రేఖాంశం'), `${(+b.lat).toFixed(4)}, ${(+b.lon).toFixed(4)}`]];
+  }
+
+  // all 16 vargas, three to a row
+  function vargasPrint() {
+    const v = S.horo.chart.vargas;
+    return `<div class="pgrid">${S.meta.vargas.map(m => v[m.code]).map(x => `<figure>${southChart(x.boxes, x.lagna_sign, x.code, nm(x))}
+      <figcaption><b>${x.code} – ${nm(x)}</b><br>${S.lang === 'telugu' ? x.purpose_telugu : x.purpose_english}</figcaption></figure>`).join('')}</div>`;
+  }
+
+  // every mahadasha with its antardashas; pratyantardashas only for the mahadasha running now
+  function dashaPrint() {
+    const box = document.createElement('div');
+    box.innerHTML = $('#tab-dasha').innerHTML;
+    box.querySelectorAll(':scope > .card > details').forEach(md => {
+      const keep = md.classList.contains('cur');
+      md.querySelectorAll('tr').forEach(tr => {
+        const last = tr.lastElementChild;
+        if (!keep) { last.remove(); return; }
+        const inner = last.querySelector('details');
+        if (inner) last.innerHTML = [...inner.querySelectorAll('div')].map(d => d.outerHTML).join('');
+      });
+    });
+    return box.innerHTML + `<p class="note">${T('Pratyantardashas are listed for the current Mahadasha only.', 'ప్రత్యంతర దశలు ప్రస్తుత మహాదశకు మాత్రమే ఇవ్వబడ్డాయి.')}</p>`;
+  }
+
+  function exportJathakamPdf() {
+    if (!S.horo) return;
+    renderAll();                                     // fresh, in the selected language
+    const c = S.horo.chart, b = { ...c.birth, name: c.name };
+    const html = (t) => $('#tab-' + t).innerHTML;
+    printReport(`${T('Jathakam', 'జాతకం')}_${fileSafe(c.name)}_${c.birth.date}`, T('Jathaka Report', 'జాతక చక్రం'),
+      kvTable(birthRows(b)),
+      [[tabName('jathakam'), html('jathakam')], [tabName('grahas'), html('grahas')], [tabName('vargas'), vargasPrint()],
+       [tabName('dasha'), dashaPrint()], [tabName('ashtaka'), html('ashtaka')], [tabName('phalitam'), html('phalitam')],
+       [tabName('parihara'), html('parihara')], [tabName('gochara'), html('gochara')]]);
+  }
+
+  function exportMatchPdf() {
+    if (!S.match) return;
+    renderMatch();
+    const q = S.matchReq, BOY = T('Boy', 'వరుడు'), GIRL = T('Girl', 'వధువు');
+    const br = birthRows(q.boy), gr = birthRows(q.girl);
+    const head = `<table class="grid"><tr><th></th><th>${BOY}</th><th>${GIRL}</th></tr>${br.map((r, i) => `<tr><th>${r[0]}</th><td>${r[1]}</td><td>${gr[i][1]}</td></tr>`).join('')}</table>`;
+    printReport(`${T('Porutham', 'పొంతన')}_${fileSafe(q.boy.name)}_${fileSafe(q.girl.name)}`, T('Match Making Report', 'వివాహ పొంతన నివేదిక'),
+      head, [[tabName('match'), $('#matchOut').innerHTML]]);
   }
 
   boot();
